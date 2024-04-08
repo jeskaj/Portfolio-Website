@@ -11,7 +11,7 @@ All files pertaining to this project can be found in the following GitHub repo:
 
 ### Purpose
 
-The purpose of this website is to showcase my skills, talents and abilities in order to introduce myself to potential employers and clients as a skilled web developer and IT professional.
+The purpose of this website is to showcase my skills, talents and abilities in order to introduce myself to potential employers as a skilled web developer and IT professional.
 
 ### Design
 
@@ -28,6 +28,8 @@ An overview/sitemap of all the pages on your website
 Explain:  
 The overall structure of your website and how different pages will be navigated
 
+![Sitemap](docs/sitemap.png)
+
 ### Functionality / features
 
 Explain functionality / features including the Tech stack (e.g. html, css, deployment platform, etc) used to develop them
@@ -36,6 +38,8 @@ Include:
 A list of components that will be used	
 Explain:  
 How components and styling will engage the audience
+
+This site was written in HTML and CSS (including scss) using VSCode.
 
 #### NOT TO BE LEFT IN
 
