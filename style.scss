@@ -1,0 +1,66 @@
+// set variables for reuse throughout stylesheet
+$test-color: red;
+$test-color2: green;
+
+// basic reset recommended by Matt E
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+// REMOVE THIS TEST CODE
+.wrapper, nav, header, main, article, section, footer {
+    border: 1px solid $test-color;
+}
+
+// REMOVE THIS TEST CODE
+footer > section, .posts > article {
+    border: 1px solid $test-color2;
+}
+
+// define wrapper as a grid to organise overall page layout
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "posts"
+        "footer"
+    ;
+}
+
+// make nav a flex container to easily centre navigational links
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// set margins around navigational links for better readability
+nav > a {
+    margin: 0.25rem 0.5rem;
+}
+
+// set header as a flex container to vertically stack header elements
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// define header, main, and footer as a flex containers to vertically stack their child elements
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// set width to 100% of parent container and align text centrally
+.post {
+    width: 100%;
+    text-align: center;
+}
