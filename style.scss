@@ -5,6 +5,7 @@ $test-color2: green;
 // basic reset recommended by Matt E
 * {
     box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -18,6 +19,8 @@ $test-color2: green;
 footer > section, .posts > article {
     border: 1px solid $test-color2;
 }
+
+
 
 // define wrapper as a grid to organise overall page layout
 #wrapper {
@@ -63,4 +66,9 @@ header, main, footer {
 .post {
     width: 100%;
     text-align: center;
+}
+
+.blog-images {
+    width: 50%;
+    border-radius: 50%;
 }

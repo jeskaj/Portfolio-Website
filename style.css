@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -44,4 +45,9 @@ header, main, footer {
 .post {
   width: 100%;
   text-align: center;
+}
+
+.blog-images {
+  width: 50%;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
