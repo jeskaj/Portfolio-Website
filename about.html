@@ -3,10 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>Jessica Jakeman</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- wrapper is parent container for defining CSS Grid for laying out all main elements of page -->
+    <div id="wrapper">
+        <!-- header to include feature my name and hero image -->
+        <header>
+            <img id="hero-image" src="img/mountains1800simon-berger-twukN12EN7c-unsplash.jpg" alt="mountain sunset">
+            <img id="jj-photo" src="img/JJ.jpg" alt="Photo of Jessica Jakeman">
+            <h1>Hi, I'm Jessica</h1>
+            <h2>Welcome to my website</h2>
+        </header>
+        <!-- Navbar to provide navigation to all main pages of site -->
+        <nav id="nav-about">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- main area of home page with initial introductory info on me -->
+        <main>
+            <h2>Jessica Jakeman</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at maxime quibusdam, sed, iusto repellendus ex amet aliquid error ducimus nam maiores fuga quaerat eos, molestias quidem enim earum deserunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at maxime quibusdam, sed, iusto repellendus ex amet aliquid error ducimus nam maiores fuga quaerat eos, molestias quidem enim earum deserunt?</p>
+        </main>
+        <!-- section is container for displaying list of blog posts -->
+        <section class="posts">
+            <article class="post" id="blog-post-1">
+                <img class="blog-images" src="img/wireframe300hal-gatewood-weRQAu9TA-A-unsplash.jpg" alt="wireframe photo by Hal Gatewood on Unsplash">
+                <h3 class="blog-title">Blog Post #1 Title</h3>
+                <p class="blog-published">Published:  09/04/2024</p>
+                <p class="blog-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a similique dolorem sapiente... read more</p>
+            </article>
+            <article class="post" id="blog-post-2">
+                <img class="blog-images" src="img/wireframe300hal-gatewood-weRQAu9TA-A-unsplash.jpg" alt="wireframe photo by Hal Gatewood on Unsplash">
+                <h3 class="blog-title">Blog Post #2 Title</h3>
+                <p class="blog-published">Published:  20/03/2024</p>
+                <p class="blog-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a similique dolorem sapiente... read more</p>
+            </article>
+            <article class="post" id="blog-post-3">
+                <img class="blog-images" src="img/wireframe300hal-gatewood-weRQAu9TA-A-unsplash.jpg" alt="wireframe photo by Hal Gatewood on Unsplash">
+                <h3 class="blog-title">Blog Post #3 Title</h3>
+                <p class="blog-published">Published:  25/02/2024</p>
+                <p class="blog-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a similique dolorem sapiente... read more</p>
+            </article>
+            <article id="blog-link">
+                <p>Read more of my blog <a href="blog.html">here</a></p>
+            </article>
+        </section>
+        <!-- footer for containing copyright & social media info -->
+        <footer>
+            <section id="socials">
+                <img class="social-logo" src="img/linkedin-black-icon.webp" alt="Linkedin logo">
+                <img class="social-logo" src="img/github-mark.png" alt="Github logo">
+            </section>
+            <section id="copyright">&copy 2024 Jessica Jakeman</section>
+        </footer>
+    </div>
 </body>
 </html>

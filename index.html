@@ -13,41 +13,26 @@
 <body>
     <!-- wrapper is parent container for defining CSS Grid for laying out all main elements of page -->
     <div id="wrapper">
-        <!-- Navbar to provide navigation to all main pages of site -->
-        <nav>
-            <a href="about.html">About me</a>
-            <a href="Portfolio.html">Portfolio</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
         <!-- header to include feature my name and hero image -->
         <header>
-            Header
+            <img id="hero-image" src="img/mountains1800simon-berger-twukN12EN7c-unsplash.jpg" alt="mountain sunset">
+            <img id="jj-photo" src="img/JJ.jpg" alt="Photo of Jessica Jakeman">
+            <h1 id="name">Jessica Jakeman</h1>
+            <p id="intro">Web development student at Coder Academy</p>
         </header>
-        <!-- main area of home page with initial introductory info on me -->
-        <main>
-            <h2>Jessica Jakeman</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at maxime quibusdam, sed, iusto repellendus ex amet aliquid error ducimus nam maiores fuga quaerat eos, molestias quidem enim earum deserunt?</p>
-        </main>
-        <!-- section is container for displaying list of blog posts -->
-        <section class="posts">
-            <article class="post" id="blog-post-1">
-                <img class="blog-images" src="img/no-revisions-0wt47z8tbVg-unsplash.jpg" alt="Work desk with MacBook & blue notepad">
-                <h3>Blog Post #1 Title</h3>
-            </article>
-            <article class="post" id="blog-post-2">
-                <img class="blog-images" src="img/no-revisions-0wt47z8tbVg-unsplash.jpg" alt="Work desk with MacBook & blue notepad">
-                <h3>Blog Post #2 Title</h3>
-            </article>
-            <article class="post" id="blog-post-3">
-                <img class="blog-images" src="img/no-revisions-0wt47z8tbVg-unsplash.jpg" alt="Work desk with MacBook & blue notepad">
-                <h3>Blog Post #3 Title</h3>
-            </article>
-            <article class="post" id="blog-link">Full Blog Link</article>
-        </section>
+        <!-- Navbar to provide navigation to all main pages of site -->
+        <nav id="nav-home">
+            <a href="about.html"><button class="nav-button">About me</button></a>
+            <a href="portfolio.html"><button class="nav-button">Portfolio</button></a>
+            <a href="blog.html"><button class="nav-button">Blog</button></a>
+            <a href="contact.html"><button class="nav-button">Contact</button></a>
+        </nav>
         <!-- footer for containing copyright & social media info -->
         <footer>
-            <section id="socials">INSERT SOCIAL MEDIA LOGOS</section>
+            <section id="socials">
+                <img class="social-logo" src="img/linkedin-black-icon.webp" alt="Linkedin logo">
+                <img class="social-logo" src="img/github-mark.png" alt="Github logo">
+            </section>
             <section id="copyright">&copy 2024 Jessica Jakeman</section>
         </footer>
     </div>
