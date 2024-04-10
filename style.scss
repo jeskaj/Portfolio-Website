@@ -15,36 +15,18 @@ $primary-background: #7C4066;
     text-decoration: none;
 }
 
-// REMOVE THIS TEST CODE
-// .wrapper, nav, header, main, article, section, footer {
-//     border: 1px solid $test-color;
-// }
-
-// REMOVE THIS TEST CODE
-// footer > section, .posts > article {
-//     border: 1px solid $test-color2;
-// }
-
 // define wrapper as a grid to organise overall page layout - not actually needed for mobile layout??
 #wrapper {
     width: 100%;
-    // height: 100vh;
+    height: 100vh;
     margin: 0 auto;
     display: grid;
-    // grid-template-rows: 6fr 8fr 3fr;
+    grid-template-rows: 6fr 8fr 3fr;
     grid-template-areas:
         "header"    
         "nav"
         "footer"
     ;
-}
-
-// define header as a flex containers to vertically stack child elements
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-area: header;
 }
 
 // set header as a flex container to vertically stack header elements
@@ -53,13 +35,14 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vw;
+    grid-area: header;
+    min-height: 70vw;
 }
 
 #hero-image {
     object-fit: cover;
     width: 100%;
-    min-height: 70vw;
+    height: 100%;
     position: absolute;
     z-index: -1;
 }
@@ -96,6 +79,9 @@ nav > a {
     font-weight: bold;
     color: gray;
     padding: 1rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #nav-home {
@@ -106,11 +92,10 @@ nav > a {
 }
 
 .nav-home-item {
-    min-height: 12vw;
-    width: 60vw;
+    min-height: 20%;
+    width: 60%;
     border: 0;
     border-radius: 3%;
-    text-align: center;
     font-size: 1.25rem;
     background: black;
     padding-top: 1.2rem;
@@ -182,6 +167,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     grid-area: footer;
     background: $primary-background;
     padding: 1rem;
@@ -190,7 +176,7 @@ footer {
 #socials {
     display: flex;
     justify-content: space-around;
-    width: 50vw;
+    width: 50%;
 
 }
 
@@ -216,7 +202,7 @@ footer {
         row-gap: 5vw;
         column-gap: 10vw;
         justify-items: center;
-        padding: 10vw;
+        padding: 10%;
         margin: 0 auto;
     }
 
@@ -229,6 +215,15 @@ footer {
 }
 
 @media only screen and (min-width: 650px) {
+    header {
+        max-height: 30vw;
+    }
+
+    nav {
+        height: 60vw;
+        grid-template-rows: 1fr 1fr;
+    }
+
     .nav-home-item {
         font-size: 2.25rem;
     }
