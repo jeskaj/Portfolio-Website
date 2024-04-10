@@ -13,7 +13,7 @@
 <body>
     <!-- wrapper is parent container for defining CSS Grid for laying out all main elements of page -->
     <div id="wrapper">
-        <!-- header to include feature my name and hero image -->
+        <!-- header featuring my headshot, name, intro text and background hero image -->
         <header>
             <img id="hero-image" src="img/mountains1800simon-berger-twukN12EN7c-unsplash.jpg" alt="mountain sunset">
             <img id="jj-photo" src="img/JJ.jpg" alt="Photo of Jessica Jakeman">
@@ -22,16 +22,20 @@
         </header>
         <!-- Navbar to provide navigation to all main pages of site -->
         <nav id="nav-home">
-            <a href="about.html"><button class="nav-button">About me</button></a>
-            <a href="portfolio.html"><button class="nav-button">Portfolio</button></a>
-            <a href="blog.html"><button class="nav-button">Blog</button></a>
-            <a href="contact.html"><button class="nav-button">Contact</button></a>
+            <a id="nav-about" class="nav-home-item" href="about.html">About me</a>
+            <a id="nav-portfolio" class="nav-home-item" href="portfolio.html">Portfolio</a>
+            <a id="nav-blog" class="nav-home-item" href="blog.html">Blog</a>
+            <a id="nav-contact" class="nav-home-item" href="contact.html">Contact</a>
         </nav>
         <!-- footer for containing copyright & social media info -->
         <footer>
             <section id="socials">
-                <img class="social-logo" src="img/linkedin-black-icon.webp" alt="Linkedin logo">
-                <img class="social-logo" src="img/github-mark.png" alt="Github logo">
+                <a href="https://www.linkedin.com/in/jessica-jakeman/" target="_blank">
+                    <img class="social-logo" src="img/linkedin-black-icon.webp" alt="Linkedin logo">
+                </a>
+                <a href="https://github.com/jeskaj" target="_blank">
+                    <img class="social-logo" src="img/github-mark.png" alt="Github logo">
+                </a>
             </section>
             <section id="copyright">&copy 2024 Jessica Jakeman</section>
         </footer>
