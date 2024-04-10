@@ -5,6 +5,8 @@ $primary-color: #5B89AE;
 $secondary-color: #D3BC96;
 $main-font-color: white;
 $primary-background: #7C4066;
+$sunset-orange: #F0B945;
+$dark-pink-mountans: #B46D73;
 
 // basic reset recommended by Matt E
 * {
@@ -15,13 +17,12 @@ $primary-background: #7C4066;
     text-decoration: none;
 }
 
-// define wrapper as a grid to organise overall page layout - not actually needed for mobile layout??
+// define wrapper as a grid to organise overall page layout
 #wrapper {
     width: 100%;
-    height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 6fr 8fr 3fr;
+    grid-template-rows: 40vh 45vh 15vh;
     grid-template-areas:
         "header"    
         "nav"
@@ -36,7 +37,7 @@ header {
     align-items: center;
     justify-content: center;
     grid-area: header;
-    min-height: 70vw;
+    height: 40vh;
 }
 
 #hero-image {
@@ -48,11 +49,11 @@ header {
 }
 
 #jj-photo {
-    width: 30vw;
+    width: 20vh;
     border-radius: 50%;
 }
 
-#name {
+h1 {
     font-size: 2.55rem;
     margin: 0.75rem;
 }
@@ -69,7 +70,6 @@ nav {
     justify-content: center;
     align-items: center;
     grid-area: nav;
-    min-height: 2.5rem;
     background: $primary-background;
 }
 
@@ -88,6 +88,7 @@ nav > a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
     padding: 1rem 0;
 }
 
@@ -171,17 +172,18 @@ footer {
     grid-area: footer;
     background: $primary-background;
     padding: 1rem;
+    // border: 3px solid yellow;
 }
 
 #socials {
     display: flex;
     justify-content: space-around;
-    width: 50%;
-
+    width: 40%;
+    // border: 3px solid red;
 }
 
 .social-logo {
-    width: 15vw;
+    width: 7vh;
 }
 
 #copyright {
@@ -189,7 +191,23 @@ footer {
     font-weight: bold;
 }
 
-// media query for tablet sized viewport
+// media query for extremely narrow mobile
+@media only screen and (max-width: 296px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #intro {
+        font-size: 0.85rem;
+    }
+
+    #socials {
+        width: 50%;
+    }
+}
+
+
+// media queries for tablet viewport sizes
 @media only screen and (min-width: 550px) {
     #intro {
         font-size: 1.35rem;
@@ -198,8 +216,9 @@ footer {
     #nav-home {
         width: 100vw;
         display: grid;
+        grid-template-rows: 45% 45%;
         grid-template-columns: 1fr 1fr;
-        row-gap: 5vw;
+        row-gap: 5vh;
         column-gap: 10vw;
         justify-items: center;
         padding: 10%;
@@ -207,24 +226,91 @@ footer {
     }
 
     .nav-home-item {
-        width: 30vw;
-        height: 30vw;
+        width: 100%;
+        height: 100%;
         font-size: 2rem;
-        padding-top: 12vw;
+    }
+
+    #socials {
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
     }
 }
 
-@media only screen and (min-width: 650px) {
-    header {
-        max-height: 30vw;
+// intermediate breakpoint large tablet/small desktop
+@media only screen and (min-width: 800px) {
+    #nav-home {
+        width: 100vw;
+        display: grid;
+        grid-template-rows: 45% 45%;
+        grid-template-columns: 1fr 1fr;
+        padding: 5% 10%;
     }
 
-    nav {
-        height: 60vw;
-        grid-template-rows: 1fr 1fr;
+    #socials {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+    }
+}
+
+// media query for desktop screens
+@media only screen and (min-width: 1100px) {
+    #wrapper {
+        grid-template-rows: 35vh 50vh 15vh;
+    }
+    
+    header {
+        height: 35vh;
+    }
+
+    #jj-photo {
+        width: 18vh;
+    }
+
+    #nav-home {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "about space1 portfolio space2"
+            "space3 blog space4 contact"
+        ;
+        column-gap: 1vw;
+        row-gap: 1vw;
+        padding: 2.5% 5%;
+        // border: 3px solid red;
     }
 
     .nav-home-item {
-        font-size: 2.25rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    #nav-about {
+        grid-area: about;
+    }
+
+    #nav-portfolio {
+        grid-area: portfolio;
+    }
+
+    #nav-blog {
+        grid-area: blog;
+    }
+
+    #nav-contact {
+        grid-area: contact;
+    }
+
+    #socials {
+        display: flex;
+        justify-content: space-between;
+        // border: 3px solid green;
+        width: 18vh;
+    }
+
+    footer {
+        background: $dark-pink-mountans;
     }
 }
