@@ -6,12 +6,20 @@
   text-decoration: none;
 }
 
-#wrapper {
+#wrapper-home {
   width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 40vh 45vh 15vh;
   grid-template-areas: "header" "nav" "footer";
+}
+
+#wrapper-contact {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 30vh 5vh 55vh 10vh;
+  grid-template-areas: "header" "nav" "main" "footer";
 }
 
 header {
@@ -21,6 +29,10 @@ header {
   justify-content: center;
   grid-area: header;
   height: 40vh;
+}
+
+#header-contact {
+  height: 30vh;
 }
 
 #hero-image {
@@ -37,9 +49,18 @@ header {
   border-radius: 50%;
 }
 
+#jj-photo-contact {
+  width: 15vh;
+  border-radius: 50%;
+}
+
 h1 {
   font-size: 2.55rem;
   margin: 0.75rem;
+}
+
+#heading-contact {
+  font-size: 2rem;
 }
 
 #intro {
@@ -65,12 +86,24 @@ nav > a {
   justify-content: center;
 }
 
-#nav-home {
+.nav-contact-item {
+  color: lightgray;
+  padding: 0 0.8rem;
+}
+
+#nav-home-pg {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   padding: 1rem 0;
+}
+
+#nav-contact-pg, #nav-about-pg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: black;
 }
 
 .nav-home-item {
@@ -84,19 +117,53 @@ nav > a {
   margin: 0.5rem;
 }
 
-main {
+.nav-contact-item {
+  border: 0;
+  font-size: 0.8rem;
+}
+
+#main-about {
+  grid-area: main;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-height: 50vw;
   padding: 1rem;
-  color: white;
+  color: lightgray;
+  background: #7C4066;
+}
+
+#main-contact {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: lightgray;
   background: #7C4066;
 }
 
 main > p {
-  margin-top: 1rem;
+  font-size: 1.2rem;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#email {
+  font-size: 1.8rem;
+}
+
+#email:visited {
+  color: #B46D73;
+}
+
+#contact-form {
+  width: 80%;
+}
+
+#contact-form > p {
+  height: 2rem;
 }
 
 .post {
@@ -156,6 +223,14 @@ footer {
   width: 40%;
 }
 
+#socials-contact {
+  margin-top: 1rem;
+}
+
+.social-logo-contact {
+  width: 10vh;
+}
+
 .social-logo {
   width: 7vh;
 }
@@ -180,7 +255,7 @@ footer {
   #intro {
     font-size: 1.35rem;
   }
-  #nav-home {
+  #nav-home-pg {
     width: 100vw;
     display: grid;
     grid-template-rows: 45% 45%;
@@ -204,7 +279,7 @@ footer {
   }
 }
 @media only screen and (min-width: 800px) {
-  #nav-home {
+  #nav-home-pg {
     width: 100vw;
     display: grid;
     grid-template-rows: 45% 45%;
@@ -227,7 +302,7 @@ footer {
   #jj-photo {
     width: 18vh;
   }
-  #nav-home {
+  #nav-home-pg {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "about space1 portfolio space2" "space3 blog space4 contact";
@@ -240,16 +315,16 @@ footer {
     width: 100%;
     height: 100%;
   }
-  #nav-about {
+  #nav-about-link {
     grid-area: about;
   }
-  #nav-portfolio {
+  #nav-portfolio-link {
     grid-area: portfolio;
   }
-  #nav-blog {
+  #nav-blog-link {
     grid-area: blog;
   }
-  #nav-contact {
+  #nav-contact-link {
     grid-area: contact;
   }
   #socials {

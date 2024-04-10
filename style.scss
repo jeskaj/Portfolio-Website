@@ -3,7 +3,7 @@ $test-color: red;
 $test-color2: green;
 $primary-color: #5B89AE;
 $secondary-color: #D3BC96;
-$main-font-color: white;
+$main-font-color: lightgray;
 $primary-background: #7C4066;
 $sunset-orange: #F0B945;
 $dark-pink-mountans: #B46D73;
@@ -18,7 +18,7 @@ $dark-pink-mountans: #B46D73;
 }
 
 // define wrapper as a grid to organise overall page layout
-#wrapper {
+#wrapper-home {
     width: 100%;
     margin: 0 auto;
     display: grid;
@@ -26,6 +26,19 @@ $dark-pink-mountans: #B46D73;
     grid-template-areas:
         "header"    
         "nav"
+        "footer"
+    ;
+}
+
+#wrapper-contact {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 30vh 5vh 55vh 10vh;
+    grid-template-areas:
+        "header"    
+        "nav"
+        "main"
         "footer"
     ;
 }
@@ -38,6 +51,10 @@ header {
     justify-content: center;
     grid-area: header;
     height: 40vh;
+}
+
+#header-contact {
+    height: 30vh;
 }
 
 #hero-image {
@@ -53,9 +70,18 @@ header {
     border-radius: 50%;
 }
 
+#jj-photo-contact {
+    width: 15vh;
+    border-radius: 50%;
+}
+
 h1 {
     font-size: 2.55rem;
     margin: 0.75rem;
+}
+
+#heading-contact {
+    font-size: 2rem;
 }
 
 #intro {
@@ -84,12 +110,24 @@ nav > a {
     justify-content: center;
 }
 
-#nav-home {
+.nav-contact-item {
+    color: $main-font-color;
+    padding: 0 0.8rem;
+}
+
+#nav-home-pg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     padding: 1rem 0;
+}
+
+#nav-contact-pg, #nav-about-pg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: black;
 }
 
 .nav-home-item {
@@ -103,7 +141,14 @@ nav > a {
     margin: 0.5rem;
 }
 
-main {
+.nav-contact-item {
+    // width: 60%;
+    border: 0;
+    font-size: 0.8rem;
+}
+
+#main-about {
+    grid-area: main;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,10 +158,39 @@ main {
     background: $primary-background;
 }
 
-main > p {
-    margin-top: 1rem;
-    text-align: center;
+#main-contact {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: $main-font-color;
+    background: $primary-background;
 }
+
+main > p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#email {
+    font-size: 1.8rem;
+}
+
+#email:visited {
+    color: #B46D73;
+}
+
+#contact-form {
+    width: 80%;
+}
+
+#contact-form > p {
+    height: 2rem;
+}
+
 
 // set width to 100% of parent container and align text centrally
 .post {
@@ -172,14 +246,20 @@ footer {
     grid-area: footer;
     background: $primary-background;
     padding: 1rem;
-    // border: 3px solid yellow;
 }
 
 #socials {
     display: flex;
     justify-content: space-around;
     width: 40%;
-    // border: 3px solid red;
+}
+
+#socials-contact {
+    margin-top: 1rem;
+}
+
+.social-logo-contact {
+    width: 10vh;
 }
 
 .social-logo {
@@ -213,7 +293,7 @@ footer {
         font-size: 1.35rem;
     }
 
-    #nav-home {
+    #nav-home-pg {
         width: 100vw;
         display: grid;
         grid-template-rows: 45% 45%;
@@ -240,7 +320,7 @@ footer {
 
 // intermediate breakpoint large tablet/small desktop
 @media only screen and (min-width: 800px) {
-    #nav-home {
+    #nav-home-pg {
         width: 100vw;
         display: grid;
         grid-template-rows: 45% 45%;
@@ -269,7 +349,7 @@ footer {
         width: 18vh;
     }
 
-    #nav-home {
+    #nav-home-pg {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
@@ -287,26 +367,25 @@ footer {
         height: 100%;
     }
 
-    #nav-about {
+    #nav-about-link {
         grid-area: about;
     }
 
-    #nav-portfolio {
+    #nav-portfolio-link {
         grid-area: portfolio;
     }
 
-    #nav-blog {
+    #nav-blog-link {
         grid-area: blog;
     }
 
-    #nav-contact {
+    #nav-contact-link {
         grid-area: contact;
     }
 
     #socials {
         display: flex;
         justify-content: space-between;
-        // border: 3px solid green;
         width: 18vh;
     }
 
