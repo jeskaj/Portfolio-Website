@@ -1,6 +1,6 @@
 // set variables for reuse throughout stylesheet
 $primary-color: #5B89AE;
-$secondary-color: #D3BC96;
+$secondary-color: #d3bc96a4;
 $main-font-color: rgba(211, 211, 211, 0.767);
 $primary-background: #7C4066;
 $sunset-orange: #F0B945;
@@ -32,14 +32,6 @@ $dark-pink-mountans: #B46D73;
 }
 
 #wrapper-about {
-    // grid-template-rows: 30vh 5vh 30vh 20vh 15vh;
-    // grid-template-rows: auto;
-    // grid-template-rows:
-        // minmax(30vh, auto),
-        // minmax(5vh, auto),
-        // minmax(30vh, auto),
-        // minmax(20vh, auto),
-        // minmax(15vh, auto);
     grid-template-areas:
         "header"    
         "nav"
@@ -49,8 +41,16 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
-#wrapper-portfolio, #wrapper-blog {
-    grid-template-rows: 30vh 5vh 50vh 15vh;
+#wrapper-portfolio {
+    grid-template-areas:
+        "header"    
+        "nav"
+        "main"
+        "footer"
+    ;
+}
+
+#wrapper-blog {
     grid-template-areas:
         "header"    
         "nav"
@@ -161,7 +161,7 @@ nav a {
     margin: 0.5rem;
 }
 
-#nav-about-pg {
+.nav-lvl2-pg {
     min-height: 5vh;
 }
 
@@ -189,28 +189,52 @@ main {
 
 #main-about {
     padding: 1rem;
-    align-items: flex-start;
     line-height: 1.25;
     background: $primary-background;
+}
+
+main a {
+    color: lightgray;
+    text-decoration: underline;
 }
 
 #resume {
     margin-bottom: 1rem;
 }
 
-.about-logos {
-     width: 10vh;
+#skills {
+    display: grid;
+    grid-template-areas: "html resume css";
+    text-align: center;
+    min-width: 30vw;
+    margin-bottom: 1rem;
 }
 
-main > p {
+.about-logos {
+    width: 10vh;
+}
+
+#html-logo {
+    grid-area: html;
+}
+
+#css-logo {
+    grid-area: css;
+}
+
+#resume {
+    grid-area: resume;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: underline;
+}
+
+main p {
     font-size: 1.2rem;
     text-align: justify;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
-
-#ima-zebra {
-    width: 80%;
 }
 
 #email {
@@ -221,8 +245,58 @@ main > p {
     color: #B46D73;
 }
 
+aside a {
+    text-decoration: underline;
+}
+
+.project {
+    color: black;
+    background: $dark-pink-mountans;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 2%;
+    margin: 1rem;
+}
+
+.project:nth-child(even) {
+    background: $secondary-color;
+}
+
+.project-image {
+    display: block;
+    margin: 0 auto;
+    width: 90%;  
+}
+
+#puppy {
+    border-radius: 50%;
+}
+
 .posts {
     grid-area: posts;
+}
+
+.post-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "image title"
+        "image published"
+        "image blurb"
+    ;
+    line-height: 1.25rem;
+    background: $dark-pink-mountans;
+    padding: 1rem;
+}
+
+.post-list:nth-child(even) {
+    background: $secondary-color;
+}
+
+#main-blog {
+    color: black;
+    line-height: 1.25;
 }
 
 // set width to 100% of parent container and align text centrally
@@ -233,22 +307,30 @@ main > p {
     grid-template-areas:
         "image title"
         "image published"
-        "image blurb"
+        "text text"
     ;
     background: $secondary-color;
     padding: 1rem;
+    border: 1px solid black;
+    border-radius: 2%;
+    margin-bottom: 1rem;
 }
 
 .post:nth-child(odd) {
     background: $dark-pink-mountans;
 }
 
+.post .blog-published {
+    font-size: 0.9rem;
+}
+
+
 .blog-images {
-    max-width: 20vw;
+    max-width: 25vw;
     border-radius: 5%;
     grid-area: image;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .blog-title {
@@ -262,6 +344,10 @@ main > p {
 .blog-blurb {
     grid-area: blurb;
     text-align: left;
+}
+
+.blog-text {
+    grid-area: text;
 }
 
 #blog-link {
@@ -289,6 +375,10 @@ footer {
 
 #socials-contact {
     margin-top: 1rem;
+}
+
+#socials-contact a {
+    text-decoration: none;
 }
 
 .social-logo-contact {
