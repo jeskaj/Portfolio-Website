@@ -1,6 +1,4 @@
 // set variables for reuse throughout stylesheet
-$test-color: red;
-$test-color2: green;
 $primary-color: #5B89AE;
 $secondary-color: #D3BC96;
 $main-font-color: rgba(211, 211, 211, 0.767);
@@ -33,8 +31,26 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
-#wrapper-contact {
-    grid-template-rows: 30vh 5vh 55vh 10vh;
+#wrapper-about {
+    // grid-template-rows: 30vh 5vh 30vh 20vh 15vh;
+    // grid-template-rows: auto;
+    // grid-template-rows:
+        // minmax(30vh, auto),
+        // minmax(5vh, auto),
+        // minmax(30vh, auto),
+        // minmax(20vh, auto),
+        // minmax(15vh, auto);
+    grid-template-areas:
+        "header"    
+        "nav"
+        "main"
+        "posts"
+        "footer"
+    ;
+}
+
+#wrapper-portfolio, #wrapper-blog {
+    grid-template-rows: 30vh 5vh 50vh 15vh;
     grid-template-areas:
         "header"    
         "nav"
@@ -43,8 +59,8 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
-#wrapper-blog, #wrapper-portfolio {
-    grid-template-rows: 30vh 5vh 50vh 15vh;
+#wrapper-contact {
+    grid-template-rows: 30vh 5vh 55vh 10vh;
     grid-template-areas:
         "header"    
         "nav"
@@ -109,6 +125,12 @@ nav {
     background: $primary-background;
 }
 
+.nav-lvl2-pg {
+    flex-direction: row;
+    justify-content: space-around;
+    background: black;
+}
+
 // set margins around navigational links for better readability
 // doesn't apply to index.html overwritten by .nav-home-item styling below
 nav a {
@@ -120,24 +142,12 @@ nav a {
     justify-content: center;
 }
 
-.nav-lvl2-pg-item {
-    color: $main-font-color;
-    padding: 0 0.8rem;
-}
-
 #nav-home-pg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     padding: 1rem 0;
-}
-
-.nav-lvl2-pg {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: black;
 }
 
 .nav-home-item {
@@ -151,14 +161,19 @@ nav a {
     margin: 0.5rem;
 }
 
+#nav-about-pg {
+    min-height: 5vh;
+}
+
 .nav-lvl2-pg-item {
+    color: $main-font-color;
+    padding: 0 0.8rem;
     border: 0;
     font-size: 0.9rem;
 }
 
 .nav-current-pg-link {
     color: rgba(128, 128, 128, 0.699);
-    // border: 2px solid yellow;
 }
 
 main {
@@ -173,19 +188,23 @@ main {
 }
 
 #main-about {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 50vw;
     padding: 1rem;
-    color: $main-font-color;
+    align-items: flex-start;
+    line-height: 1.25;
     background: $primary-background;
+}
+
+#resume {
+    margin-bottom: 1rem;
+}
+
+.about-logos {
+     width: 10vh;
 }
 
 main > p {
     font-size: 1.2rem;
-    text-align: center;
+    text-align: justify;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -202,10 +221,13 @@ main > p {
     color: #B46D73;
 }
 
+.posts {
+    grid-area: posts;
+}
+
 // set width to 100% of parent container and align text centrally
 .post {
     width: 100%;
-    text-align: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
@@ -218,11 +240,11 @@ main > p {
 }
 
 .post:nth-child(odd) {
-    background: $primary-color;
+    background: $dark-pink-mountans;
 }
 
 .blog-images {
-    max-width: 40vw;
+    max-width: 20vw;
     border-radius: 5%;
     grid-area: image;
     margin-left: 1rem;

@@ -12,12 +12,12 @@
 </head>
 <body>
     <!-- wrapper is parent container for defining CSS Grid for laying out all main elements of page -->
-    <div id="wrapper">
+    <div id="wrapper-about" class="wrapper">
         <!-- header to include feature my name and hero image -->
         <header class="header-lvl2-pg">
             <img id="hero-image" src="img/mountains1800simon-berger-twukN12EN7c-unsplash.jpg" alt="mountain sunset">
             <img class="jj-photo-lvl2-pg" src="img/JJ.jpg" alt="Photo of Jessica Jakeman">
-            <h1 class="heading-lvl2-pg">About me</h1>
+            <h1 class="heading-lvl2-pg">Jessica Jakeman</h1>
         </header>
         <!-- Navbar to provide navigation to all main pages of site -->
         <nav id="nav-about-pg" class="nav-lvl2-pg">
@@ -29,34 +29,46 @@
         </nav>
         <!-- main area of home page with initial introductory info on me -->
         <main id="main-about">
-            <h2>Jessica Jakeman</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at maxime quibusdam, sed, iusto repellendus ex amet aliquid error ducimus nam maiores fuga quaerat eos, molestias quidem enim earum deserunt?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at maxime quibusdam, sed, iusto repellendus ex amet aliquid error ducimus nam maiores fuga quaerat eos, molestias quidem enim earum deserunt?</p>
+            <a id="resume" href="Resume-Jessica-Jakeman.pdf" target="_blank">Resume of Jessica Jakeman</a>
+            <img id="html-logo" class="about-logos" src="img/html-5-logo-png-transparent.png" alt="HTML5 Logo">
+            <img id="css-logo" class="about-logos" src="img/css3-logo-png-transparent.png" alt="CSS Logo">
+            <h2>Hi, I'm Jessica...</h2>
+            <p>I am an aspiring web developer, currently enrolled in Coder Academy's Diploma of Information Technology - Web Development (Accelerated) programme.  
+                I am excited to be moving into the field of web development and am enjoying learning HTLM, CSS, terminal commands, git and all the skills that it takes be a successful IT professional and to produce functional and responsive websites.  I look forward to learning how to code applications that make people's lives easier and more enjoyable and that they will therefore love to use!</p>
+            <p>I have over 20 years of experience in the workforce, working as Administration Manager at a professional accountancy firm in Brisbane. 
+               In this role, in addition to performing normal administrative functions and managing the administration team, I was the bridge between our business and IT professionals.  I provided on the ground IT support to our staff and was repsonsible for the implementation of many of our major software systems.</p>
+            <p>I worked closely with our IT director to evaluate potential new software systems, with the relevant IT consultants to implement them and set up systems and procedures to train our staff in using them efficiently and effectively.
+            <p>Over the past decade, my firm transitioned to using cloud applications for all major business requirements and this process provided me with invaluable experience in understanding user needs and the ways in which software and websites can provide a streamlined and intuitive experience - or fail to do so!</p>
+            <p>During this process, our firm worked very closely with our software providers.  I provided a lot of feedback to them and got used to hearing the response, "Nobody's ever asked us that before!"; my common sense and logical approach to identifying our business and user requirements and offering potential solutions to gaps in current software functionality was appreciated by our software providers and often implemented in future releases.</p>
+            <p>This experience has left me ideally placed to be involved in the production of websites and applications that will successfully serve business and user needs.</p>
+            <p>My first jobs as a teenager were teaching violin and theory of music (I grew up playing piano and violin) and tutoring highschool maths.  I also worked as a Zumba instructor for a while in 2010 (I think my highschool HPE teachers would have fallen off their chairs in shock!) and am currently filling in teaching some ballroom dancing classes for my teacher who is overseas for a few months.</p>
+            <p>My favourite hobby these days is dancing - I enjoy ballroom, latin and swing dancing and try to get out on the floor at least twice a week (as often as possible, when time allows!).  Other interests include rainforest bushalking (the sun is not my friend), reading and watching movies.</p>
+            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est at maxime quibusdam, sed, iusto repellendus ex amet aliquid error ducimus nam maiores fuga quaerat eos, molestias quidem enim earum deserunt?</p> -->
         </main>
         <!-- section is container for displaying list of blog posts -->
-        <section class="posts">
+        <aside class="posts">
             <article class="post" id="blog-post-1">
                 <img class="blog-images" src="img/wireframe300hal-gatewood-weRQAu9TA-A-unsplash.jpg" alt="wireframe photo by Hal Gatewood on Unsplash">
                 <h3 class="blog-title">Blog Post #1 Title</h3>
                 <p class="blog-published">Published:  09/04/2024</p>
-                <p class="blog-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a similique dolorem sapiente... read more</p>
+                <p class="blog-blurb">Blog intro text... <a href="blog.html#blog-post-1">read more</a></p>
             </article>
             <article class="post" id="blog-post-2">
                 <img class="blog-images" src="img/wireframe300hal-gatewood-weRQAu9TA-A-unsplash.jpg" alt="wireframe photo by Hal Gatewood on Unsplash">
                 <h3 class="blog-title">Blog Post #2 Title</h3>
                 <p class="blog-published">Published:  20/03/2024</p>
-                <p class="blog-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a similique dolorem sapiente... read more</p>
+                <p class="blog-blurb">Blog intro text... <a href="blog.html#blog-post-2">read more</a></p>
             </article>
             <article class="post" id="blog-post-3">
                 <img class="blog-images" src="img/wireframe300hal-gatewood-weRQAu9TA-A-unsplash.jpg" alt="wireframe photo by Hal Gatewood on Unsplash">
                 <h3 class="blog-title">Blog Post #3 Title</h3>
                 <p class="blog-published">Published:  25/02/2024</p>
-                <p class="blog-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus a similique dolorem sapiente... read more</p>
+                <p class="blog-blurb">Blog intro text... <a href="blog.html#blog-post-3">read more</a></p>
             </article>
             <article id="blog-link">
                 <p>Read more of my blog <a href="blog.html">here</a></p>
             </article>
-        </section>
+        </aside>
         <!-- footer for containing copyright & social media info -->
         <footer>
             <section id="socials">
