@@ -5,8 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- wrapper is parent container for defining CSS Grid for laying out all main elements of page -->
+    <div id="wrapper-portfolio" class="wrapper">
+        <!-- header featuring my headshot, page heading and background hero image -->
+        <header id="header-portfolio" class="header-lvl2-pg">
+            <img id="hero-image" src="img/mountains1800simon-berger-twukN12EN7c-unsplash.jpg" alt="mountain sunset">
+            <img id="jj-photo-portfolio" class="jj-photo-lvl2-pg" src="img/JJ.jpg" alt="Photo of Jessica Jakeman">
+            <h1 id="heading-portfolio" class="heading-lvl2-pg">Portfolio</h1>
+        </header>
+        <!-- Navbar to provide navigation to all main pages of site -->
+        <nav id="nav-portfolio-pg" class="nav-lvl2-pg">
+            <a id="nav-home-link" class="nav-lvl2-pg-item" href="index.html">Home</a>
+            <a id="nav-about-link" class="nav-lvl2-pg-item" href="about.html">About me</a>
+            <a id="nav-portfolio-link" class="nav-lvl2-pg-item nav-current-pg-link">Portfolio</a>
+            <a id="nav-blog-link" class="nav-lvl2-pg-item" href="blog.html">Blog</a>
+            <a id="nav-contact-link" class="nav-lvl2-pg-item" href="contact.html">Contact</a>
+        </nav>
+        <!-- main area of blog page containing blog articles -->
+        <main id="main-portfolio">
+            <p>PORTFOLIO PAGE PLACEHOLDER TEXT</p>
+            <img id="ima-zebra" src="img/imazebra1137.jpg" alt="I'm a zerbra website layout">
+        </main>
+        <!-- footer for containing copyright & social media info -->
+        <footer>
+            <section id="socials">
+                <a href="https://www.linkedin.com/in/jessica-jakeman/" target="_blank">
+                    <img class="social-logo" src="img/linkedin-black-icon.webp" alt="Linkedin logo">
+                </a>
+                <a href="https://github.com/jeskaj" target="_blank">
+                    <img class="social-logo" src="img/github-mark.png" alt="Github logo">
+                </a>
+            </section>
+            <section id="copyright">&copy 2024 Jessica Jakeman</section>
+        </footer>
+    </div>
 </body>
 </html>

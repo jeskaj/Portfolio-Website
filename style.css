@@ -6,19 +6,24 @@
   text-decoration: none;
 }
 
-#wrapper-home {
+.wrapper {
   width: 100%;
   margin: 0 auto;
   display: grid;
+}
+
+#wrapper-home {
   grid-template-rows: 40vh 45vh 15vh;
   grid-template-areas: "header" "nav" "footer";
 }
 
 #wrapper-contact {
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
   grid-template-rows: 30vh 5vh 55vh 10vh;
+  grid-template-areas: "header" "nav" "main" "footer";
+}
+
+#wrapper-blog, #wrapper-portfolio {
+  grid-template-rows: 30vh 5vh 50vh 15vh;
   grid-template-areas: "header" "nav" "main" "footer";
 }
 
@@ -31,7 +36,7 @@ header {
   height: 40vh;
 }
 
-#header-contact {
+.header-lvl2-pg {
   height: 30vh;
 }
 
@@ -49,7 +54,7 @@ header {
   border-radius: 50%;
 }
 
-#jj-photo-contact {
+.jj-photo-lvl2-pg {
   width: 15vh;
   border-radius: 50%;
 }
@@ -59,7 +64,7 @@ h1 {
   margin: 0.75rem;
 }
 
-#heading-contact {
+.heading-lvl2-pg {
   font-size: 2rem;
 }
 
@@ -77,7 +82,7 @@ nav {
   background: #7C4066;
 }
 
-nav > a {
+nav a {
   font-weight: bold;
   color: gray;
   padding: 1rem 0.8rem;
@@ -86,8 +91,8 @@ nav > a {
   justify-content: center;
 }
 
-.nav-contact-item {
-  color: lightgray;
+.nav-lvl2-pg-item {
+  color: rgba(211, 211, 211, 0.767);
   padding: 0 0.8rem;
 }
 
@@ -99,7 +104,7 @@ nav > a {
   padding: 1rem 0;
 }
 
-#nav-contact-pg, #nav-about-pg {
+.nav-lvl2-pg {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -117,9 +122,24 @@ nav > a {
   margin: 0.5rem;
 }
 
-.nav-contact-item {
+.nav-lvl2-pg-item {
   border: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.nav-current-pg-link {
+  color: rgba(128, 128, 128, 0.699);
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  color: rgba(211, 211, 211, 0.767);
+  background: #7C4066;
 }
 
 #main-about {
@@ -129,17 +149,7 @@ nav > a {
   align-items: center;
   max-height: 50vw;
   padding: 1rem;
-  color: lightgray;
-  background: #7C4066;
-}
-
-#main-contact {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  color: lightgray;
+  color: rgba(211, 211, 211, 0.767);
   background: #7C4066;
 }
 
@@ -150,20 +160,16 @@ main > p {
   margin-bottom: 1rem;
 }
 
+#ima-zebra {
+  width: 80%;
+}
+
 #email {
   font-size: 1.8rem;
 }
 
 #email:visited {
   color: #B46D73;
-}
-
-#contact-form {
-  width: 80%;
-}
-
-#contact-form > p {
-  height: 2rem;
 }
 
 .post {
@@ -198,6 +204,7 @@ main > p {
 
 .blog-blurb {
   grid-area: blurb;
+  text-align: left;
 }
 
 #blog-link {

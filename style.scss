@@ -3,7 +3,7 @@ $test-color: red;
 $test-color2: green;
 $primary-color: #5B89AE;
 $secondary-color: #D3BC96;
-$main-font-color: lightgray;
+$main-font-color: rgba(211, 211, 211, 0.767);
 $primary-background: #7C4066;
 $sunset-orange: #F0B945;
 $dark-pink-mountans: #B46D73;
@@ -18,10 +18,13 @@ $dark-pink-mountans: #B46D73;
 }
 
 // define wrapper as a grid to organise overall page layout
-#wrapper-home {
+.wrapper {
     width: 100%;
     margin: 0 auto;
     display: grid;
+}
+
+#wrapper-home {
     grid-template-rows: 40vh 45vh 15vh;
     grid-template-areas:
         "header"    
@@ -31,10 +34,17 @@ $dark-pink-mountans: #B46D73;
 }
 
 #wrapper-contact {
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
     grid-template-rows: 30vh 5vh 55vh 10vh;
+    grid-template-areas:
+        "header"    
+        "nav"
+        "main"
+        "footer"
+    ;
+}
+
+#wrapper-blog, #wrapper-portfolio {
+    grid-template-rows: 30vh 5vh 50vh 15vh;
     grid-template-areas:
         "header"    
         "nav"
@@ -53,7 +63,7 @@ header {
     height: 40vh;
 }
 
-#header-contact {
+.header-lvl2-pg {
     height: 30vh;
 }
 
@@ -70,7 +80,7 @@ header {
     border-radius: 50%;
 }
 
-#jj-photo-contact {
+.jj-photo-lvl2-pg {
     width: 15vh;
     border-radius: 50%;
 }
@@ -80,7 +90,7 @@ h1 {
     margin: 0.75rem;
 }
 
-#heading-contact {
+.heading-lvl2-pg {
     font-size: 2rem;
 }
 
@@ -101,7 +111,7 @@ nav {
 
 // set margins around navigational links for better readability
 // doesn't apply to index.html overwritten by .nav-home-item styling below
-nav > a {
+nav a {
     font-weight: bold;
     color: gray;
     padding: 1rem 0.8rem;
@@ -110,7 +120,7 @@ nav > a {
     justify-content: center;
 }
 
-.nav-contact-item {
+.nav-lvl2-pg-item {
     color: $main-font-color;
     padding: 0 0.8rem;
 }
@@ -123,7 +133,7 @@ nav > a {
     padding: 1rem 0;
 }
 
-#nav-contact-pg, #nav-about-pg {
+.nav-lvl2-pg {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -141,10 +151,25 @@ nav > a {
     margin: 0.5rem;
 }
 
-.nav-contact-item {
-    // width: 60%;
+.nav-lvl2-pg-item {
     border: 0;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.nav-current-pg-link {
+    color: rgba(128, 128, 128, 0.699);
+    // border: 2px solid yellow;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    color: $main-font-color;
+    background: $primary-background;
 }
 
 #main-about {
@@ -158,21 +183,15 @@ nav > a {
     background: $primary-background;
 }
 
-#main-contact {
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    color: $main-font-color;
-    background: $primary-background;
-}
-
 main > p {
     font-size: 1.2rem;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+#ima-zebra {
+    width: 80%;
 }
 
 #email {
@@ -182,15 +201,6 @@ main > p {
 #email:visited {
     color: #B46D73;
 }
-
-#contact-form {
-    width: 80%;
-}
-
-#contact-form > p {
-    height: 2rem;
-}
-
 
 // set width to 100% of parent container and align text centrally
 .post {
@@ -229,6 +239,7 @@ main > p {
 
 .blog-blurb {
     grid-area: blurb;
+    text-align: left;
 }
 
 #blog-link {
