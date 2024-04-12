@@ -185,6 +185,10 @@ main a {
   width: 10vh;
 }
 
+#about-text {
+  line-height: 1.4;
+}
+
 #html-logo {
   grid-area: html;
 }
@@ -251,7 +255,7 @@ aside a {
 }
 
 .post-list:nth-child(even) {
-  background: rgba(211, 188, 150, 0.6431372549);
+  background: #BFAA88;
 }
 
 #main-blog {
@@ -279,7 +283,7 @@ aside a {
   font-size: 0.9rem;
 }
 
-.blog-images {
+.blog-images, .blog-list-images {
   max-width: 25vw;
   border-radius: 5%;
   grid-area: image;
@@ -387,17 +391,43 @@ footer {
     justify-content: space-around;
     width: 30%;
   }
-  #wrapper-contact {
-    grid-template-rows: 30vh 5vh 55vh 10vh;
-    grid-template-columns: 1fr 3fr;
-    grid-template-areas: "header header" "nav main" "nav main" "footer footer";
+  footer {
+    font-size: 0.8rem;
+    background: #B46D73;
   }
   .nav-lvl2-pg {
     flex-direction: column;
     justify-content: space-around;
   }
-  .nav-lvl2-pg-item {
+  .nav-contact-pg-item {
     font-size: 1.25rem;
+  }
+  #wrapper-about {
+    height: 100vh;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "header header header" "nav main posts" "footer footer footer";
+  }
+  #nav-about-pg, #main-about, #aside-about {
+    max-height: 60vh;
+    overflow: auto;
+    scrollbar-color: rgba(211, 188, 150, 0.6431372549) black;
+    scrollbar-width: thin;
+  }
+  #aside-about {
+    border: 1px solid black;
+  }
+  .blog-list-images {
+    width: 80%;
+    margin: 8px 0;
+  }
+  .post-list {
+    display: flex;
+    flex-direction: column;
+  }
+  #wrapper-contact {
+    grid-template-rows: 30vh 60vh 10vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header header" "nav main" "footer footer";
   }
   #main-contact {
     padding-left: 20px;
@@ -405,10 +435,6 @@ footer {
   }
   #main-contact p {
     font-size: 1.7rem;
-  }
-  footer {
-    font-size: 0.8rem;
-    background: #B46D73;
   }
 }
 @media only screen and (min-width: 800px) {

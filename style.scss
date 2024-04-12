@@ -6,6 +6,12 @@ $primary-background: #7C4066;
 $sunset-orange: #F0B945;
 $dark-pink-mountans: #B46D73;
 
+@mixin scrolling-section {
+    overflow: auto;
+    scrollbar-color: $secondary-color transparent;
+    // scrollbar-width: thin;
+}
+
 // basic reset recommended by Matt E
 * {
     box-sizing: border-box;
@@ -133,7 +139,7 @@ nav {
 }
 
 // set margins around navigational links for better readability
-// doesn't apply to index.html overwritten by .nav-home-item styling below
+// CHECK THIS -> doesn't apply to index.html overwritten by .nav-home-item styling below
 nav a {
     font-weight: bold;
     color: gray;
@@ -174,6 +180,7 @@ nav a {
 }
 
 main {
+    @include scrolling-section()
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -214,13 +221,18 @@ main a {
 #skills {
     display: grid;
     grid-template-areas: "html resume css";
-    text-align: center;
+    justify-content: center;
     min-width: 30vw;
     margin-bottom: 1rem;
 }
 
 .about-logos {
     width: 10vh;
+    align-self: center;
+}
+
+#about-text {
+    line-height: 1.4;
 }
 
 #html-logo {
@@ -278,6 +290,7 @@ aside a {
     grid-area: posts;
 }
 
+// list of blog posts in lower part of About
 .post-list {
     width: 100%;
     display: grid;
@@ -293,7 +306,7 @@ aside a {
 }
 
 .post-list:nth-child(even) {
-    background: $secondary-color;
+    background: #BFAA88;
 }
 
 #main-blog {
@@ -301,7 +314,7 @@ aside a {
     line-height: 1.25;
 }
 
-// set width to 100% of parent container and align text centrally
+// post containers on blog page - set width to 100% of parent container
 .post {
     width: 100%;
     display: grid;
@@ -327,7 +340,7 @@ aside a {
 }
 
 
-.blog-images {
+.blog-images, .blog-list-images {
     max-width: 25vw;
     border-radius: 5%;
     grid-area: image;
@@ -455,26 +468,62 @@ footer {
         justify-content: space-around;
         width: 30%;
     }
-
-    // Adjustments required for Contact page
-    #wrapper-contact {
-        grid-template-rows: 30vh 5vh 55vh 10vh;
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas:
-            "header header"    
-            "nav main"
-            "nav main"
-            "footer footer"
-        ;
+    
+    footer {
+        font-size: 0.8rem;
+        background: #B46D73;
     }
 
+    // Adjustments for all 2nd level pages
     .nav-lvl2-pg {
         flex-direction: column;
         justify-content: space-around;
     }
 
-    .nav-lvl2-pg-item {
-        font-size: 1.25rem;
+    // .nav-contact-pg-item {
+    //     font-size: 1.25rem;
+    //     border: 2px solid red;
+    // }
+
+    // Adjustments required for About
+    #wrapper-about {
+        height: 100vh;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas:
+            "header header header"    
+            "nav main posts"
+            "footer footer footer"
+        ;
+    }
+
+    #nav-about-pg, #main-about, #aside-about {
+        max-height: 60vh;
+        @include scrolling-section()
+    }
+
+    #aside-about {
+        border: 1px solid black;
+    }
+
+    .blog-list-images {
+        width: 80%;
+        margin: 8px 0;
+    }
+
+    .post-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // Adjustments required for Contact page
+    #wrapper-contact {
+        grid-template-rows: 30vh 60vh 10vh;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "header header"    
+            "nav main"
+            "footer footer"
+        ;
     }
 
     #main-contact {
@@ -484,11 +533,6 @@ footer {
 
     #main-contact p {
         font-size: 1.7rem;
-    }
-
-    footer {
-        font-size: 0.8rem;
-        background: #B46D73;
     }
 }
 
@@ -621,5 +665,4 @@ footer {
     #socials-contact {
         width: 30vh;
     }
-    
 }
