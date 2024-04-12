@@ -570,6 +570,20 @@ footer {
         width: 80%;
     }
 
+    // Further adjustments required for Blog page
+    // Adjust grid columns on blog article containers to make image column narrower
+    .post {
+        grid-template-columns: 1fr 3fr;
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    // Add right margin to blog post images
+    .blog-images {
+        max-width: 15vw;
+        margin-right: 1rem;
+    }
+
     // Adjustments required for Contact page
     // Redine wrapper grid with three columns to enable nav as vertical sidebar
     #wrapper-contact {
@@ -580,34 +594,6 @@ footer {
             "nav main"
             "footer footer"
         ;
-    }
-
-    .blog-images {
-        width: 25%;
-        border: 2px solid green;
-    }
-
-    // Adjust grid columns on blog article containers to make image column narrower
-    .post {
-        border: 2px solid red
-        // width: 100%;
-        // display: grid;
-        grid-template-columns: 1fr 3fr;
-        // grid-template-areas:
-        //     "image title"
-        //     "image published"
-        //     "text text"
-        ;
-    }
-
-    // Increase margin around blog post containers
-    .post {
-        margin: 1rem;
-    }
-
-    // Add right margin to blog post images
-    .blog-images {
-        margin-right: 1rem;
     }
 
     // Adjust styling on Main section of Contact page
@@ -664,10 +650,13 @@ footer {
     }
 
     // Adjustments for Blog page
-    // Decrease size of blog images
-    .blog-images {
-        width: 15vw;
-        border: 2px solid red;
+    // Increase size of blog titles & dates published
+    .blog-title {
+        font-size: 1.5rem;
+    }
+
+    .blog-published {
+        font-size: 1.1rem;
     }
 }
 
@@ -741,7 +730,7 @@ footer {
     // Made Aside column continaing list of blog posts narrower
     #wrapper-about {
         height: 100vh;
-        grid-template-columns: 1fr 3fr 0.7fr;
+        grid-template-columns: 0.7fr 3fr 1fr;
         grid-template-areas:
             "header header header"    
             "nav main posts"
@@ -749,10 +738,10 @@ footer {
         ;
     }
 
-    // Adjustments required for Portfolio
-    // Adjust grid columns of Portfolio page to reduce width of nav sidebar
-    #wrapper-portfolio {
-        grid-template-columns: 0.7fr 3fr;
+    // Adjustments required for Portfolio & Blog pages
+    // Adjust grid columns of Portfolio & Blog pages to reduce width of nav sidebar
+    #wrapper-portfolio, #wrapper-blog {
+        grid-template-columns: 0.7fr 4fr;
     }
 
     // Adjust layout of Main section of Portfolio page to display projects horizontally
@@ -774,12 +763,32 @@ footer {
         max-width: 25vh;
     }
 
+    // Further Adjustments for Blog page
+    // Further adjust grid columns on blog article containers to make image column narrower
+    .post {
+        grid-template-columns: 1fr 5fr;
+        border-radius: 1%;
+    }
 
+    // Increase size of blog titles & dates published
+    .blog-title {
+        font-size: 1.75rem;
+    }
+
+    .blog-published {
+        font-size: 1.3rem;
+    }
+    
+    // Reduce size of blog images
+    .blog-images {
+        width: 90%;
+        padding-right: 10px;
+    }
 
     // Adjustments required for Contact page
     // Adjust column proportions to reduce width of sidebar nav
     #wrapper-contact {
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 0.7fr 4fr;
     }
     
     // Apply grid to Main contact info area to better space out elements on screen

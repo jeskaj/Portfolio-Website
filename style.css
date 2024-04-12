@@ -425,19 +425,19 @@ footer {
   .project-image {
     width: 80%;
   }
+  .post {
+    grid-template-columns: 1fr 3fr;
+    width: 90%;
+    margin-top: 10px;
+  }
+  .blog-images {
+    max-width: 15vw;
+    margin-right: 1rem;
+  }
   #wrapper-contact {
     grid-template-rows: 30vh 60vh 10vh;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: "header header" "nav main" "footer footer";
-  }
-  .post {
-    border: 2px solid red;
-  }
-  .post {
-    margin: 1rem;
-  }
-  .blog-images {
-    margin-right: 1rem;
   }
   #main-contact {
     padding-left: 20px;
@@ -472,9 +472,11 @@ footer {
   .project-image {
     width: 60%;
   }
-  .blog-images {
-    width: 15vw;
-    border: 2px solid red;
+  .blog-title {
+    font-size: 1.5rem;
+  }
+  .blog-published {
+    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -521,11 +523,11 @@ footer {
   }
   #wrapper-about {
     height: 100vh;
-    grid-template-columns: 1fr 3fr 0.7fr;
+    grid-template-columns: 0.7fr 3fr 1fr;
     grid-template-areas: "header header header" "nav main posts" "footer footer footer";
   }
-  #wrapper-portfolio {
-    grid-template-columns: 0.7fr 3fr;
+  #wrapper-portfolio, #wrapper-blog {
+    grid-template-columns: 0.7fr 4fr;
   }
   #main-portfolio {
     display: grid;
@@ -540,8 +542,22 @@ footer {
     max-height: 45vh;
     max-width: 25vh;
   }
+  .post {
+    grid-template-columns: 1fr 5fr;
+    border-radius: 1%;
+  }
+  .blog-title {
+    font-size: 1.75rem;
+  }
+  .blog-published {
+    font-size: 1.3rem;
+  }
+  .blog-images {
+    width: 90%;
+    padding-right: 10px;
+  }
   #wrapper-contact {
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 0.7fr 4fr;
   }
   #main-contact {
     display: grid;
