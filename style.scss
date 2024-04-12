@@ -128,6 +128,7 @@ nav {
 .nav-lvl2-pg {
     flex-direction: row;
     justify-content: space-around;
+    min-height: 5vh;
     background: black;
 }
 
@@ -161,10 +162,6 @@ nav a {
     margin: 0.5rem;
 }
 
-.nav-lvl2-pg {
-    min-height: 5vh;
-}
-
 .nav-lvl2-pg-item {
     color: $main-font-color;
     padding: 0 0.8rem;
@@ -182,9 +179,21 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 0.5rem;
     color: $main-font-color;
     background: $primary-background;
+}
+
+main p {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main a {
+    color: lightgray;
+    text-decoration: underline;
 }
 
 #main-about {
@@ -193,9 +202,9 @@ main {
     background: $primary-background;
 }
 
-main a {
-    color: lightgray;
-    text-decoration: underline;
+#main-contact p {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #resume {
@@ -228,13 +237,6 @@ main a {
     font-size: 1.2rem;
     color: white;
     text-decoration: underline;
-}
-
-main p {
-    font-size: 1.2rem;
-    text-align: justify;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 #email {
@@ -367,13 +369,20 @@ footer {
     padding: 1rem;
 }
 
-#socials {
+#contact3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials {
     display: flex;
     justify-content: space-around;
     width: 40%;
 }
 
 #socials-contact {
+    width: 55%;
     margin-top: 1rem;
 }
 
@@ -383,6 +392,8 @@ footer {
 
 .social-logo-contact {
     width: 10vh;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .social-logo {
@@ -394,24 +405,29 @@ footer {
     font-weight: bold;
 }
 
-// media query for extremely narrow mobile
-@media only screen and (max-width: 296px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    #intro {
-        font-size: 0.85rem;
-    }
-
-    #socials {
-        width: 50%;
-    }
+#copyright-contact {
+    font-weight: bold;
 }
+
+// media query for extremely narrow mobile
+// @media only screen and (max-width: 296px) {
+//     h1 {
+//         font-size: 1.5rem;
+//     }
+
+//     #intro {
+//         font-size: 0.85rem;
+//     }
+
+//     .socials {
+//         width: 50%;
+//     }
+// }
 
 
 // media queries for tablet viewport sizes
 @media only screen and (min-width: 550px) {
+    // Adjustments required for Home page
     #intro {
         font-size: 1.35rem;
     }
@@ -434,10 +450,45 @@ footer {
         font-size: 2rem;
     }
 
-    #socials {
+    .socials {
         display: flex;
         justify-content: space-around;
         width: 30%;
+    }
+
+    // Adjustments required for Contact page
+    #wrapper-contact {
+        grid-template-rows: 30vh 5vh 55vh 10vh;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "header header"    
+            "nav main"
+            "nav main"
+            "footer footer"
+        ;
+    }
+
+    .nav-lvl2-pg {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .nav-lvl2-pg-item {
+        font-size: 1.25rem;
+    }
+
+    #main-contact {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    #main-contact p {
+        font-size: 1.7rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        background: #B46D73;
     }
 }
 
@@ -451,10 +502,23 @@ footer {
         padding: 5% 10%;
     }
 
-    #socials {
+    .socials {
         display: flex;
         justify-content: space-around;
         width: 20%;
+    }
+
+    // Adjustments for level 2 pags
+    .jj-photo-lvl2-pg {
+        width: 17vh;
+    }
+    
+    .heading-lvl2-pg {
+        font-size: 2.3rem;
+    }
+
+    .nav-lvl2-pg-item {
+        font-size: 1.8rem;
     }
 }
 
@@ -482,7 +546,6 @@ footer {
         column-gap: 1vw;
         row-gap: 1vw;
         padding: 2.5% 5%;
-        // border: 3px solid red;
     }
 
     .nav-home-item {
@@ -506,7 +569,7 @@ footer {
         grid-area: contact;
     }
 
-    #socials {
+    .socials {
         display: flex;
         justify-content: space-between;
         width: 18vh;
@@ -515,4 +578,48 @@ footer {
     footer {
         background: $dark-pink-mountans;
     }
+
+    // Adjustments for level 2 pags
+    // .jj-photo-lvl2-pg {
+    //     width: 17vh;
+    // }
+    
+    // .heading-lvl2-pg {
+    //     font-size: 2.3rem;
+    // }
+
+    .nav-lvl2-pg-item {
+        font-size: 2rem;
+    }
+
+    // Adjustments required for Contact page
+    #wrapper-contact {
+        grid-template-columns: 1fr 4fr;
+    }
+    
+    #main-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "contact1 contact2"
+            "contact3 contact3"
+        ;
+    }
+
+    #contact1 {
+        grid-area: contact1;
+    }
+
+    #contact2 {
+        grid-area: contact2;
+    }
+
+    #contact3 {
+        grid-area: contact3;
+    }
+
+    #socials-contact {
+        width: 30vh;
+    }
+    
 }
