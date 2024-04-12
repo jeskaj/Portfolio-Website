@@ -5,11 +5,15 @@ $main-font-color: rgba(211, 211, 211, 0.767);
 $primary-background: #7C4066;
 $sunset-orange: #F0B945;
 $dark-pink-mountans: #B46D73;
+$blog-list-alt: #b6a994;
+$cream: #FAE8E0;
+$rose-quartz: #FADCD9;
 
+// define mixins for efficient re-use of groups of styling declarations
+// styling for components that may overflow and need scrollbars
 @mixin scrolling-section {
     overflow: auto;
-    scrollbar-color: $secondary-color transparent;
-    // scrollbar-width: thin;
+    scrollbar-color: $secondary-color $primary-background;
 }
 
 // basic reset recommended by Matt E
@@ -28,6 +32,7 @@ $dark-pink-mountans: #B46D73;
     display: grid;
 }
 
+// set grid template for Home page
 #wrapper-home {
     grid-template-rows: 40vh 45vh 15vh;
     grid-template-areas:
@@ -37,6 +42,7 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
+// set grid template for About page
 #wrapper-about {
     grid-template-areas:
         "header"    
@@ -47,6 +53,7 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
+// set grid template for Portfolio page
 #wrapper-portfolio {
     grid-template-areas:
         "header"    
@@ -56,6 +63,7 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
+// set grid template for Blog page
 #wrapper-blog {
     grid-template-areas:
         "header"    
@@ -65,6 +73,7 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
+// set grid template for Contact page
 #wrapper-contact {
     grid-template-rows: 30vh 5vh 55vh 10vh;
     grid-template-areas:
@@ -75,7 +84,7 @@ $dark-pink-mountans: #B46D73;
     ;
 }
 
-// set header as a flex container to vertically stack header elements
+// set header as a flex container lay out header elements - vertically stacked & vert/horiz centered
 header {
     display: flex;
     flex-direction: column;
@@ -85,10 +94,12 @@ header {
     height: 40vh;
 }
 
+// Adjust height of Header on level 2 pages
 .header-lvl2-pg {
     height: 30vh;
 }
 
+// Position Header hero image as background image covering entire header area
 #hero-image {
     object-fit: cover;
     width: 100%;
@@ -97,32 +108,37 @@ header {
     z-index: -1;
 }
 
+// Style headshot photo in header on Home page
 #jj-photo {
     width: 20vh;
     border-radius: 50%;
 }
 
+// Style headshot photo in header on level 2 pages
 .jj-photo-lvl2-pg {
     width: 15vh;
     border-radius: 50%;
 }
 
+// Style main heading in header on Home page
 h1 {
     font-size: 2.55rem;
     margin: 0.75rem;
 }
 
+// Style main heading in header on level 2 pages
 .heading-lvl2-pg {
     font-size: 2rem;
 }
 
+// Style intro text under heading on Home page
 #intro {
     width: 50vw;
     text-align: center;
     font-size: 1rem;
 }
 
-// make nav a flex container to easily centre navigational links
+// make nav a flex container to centre navigational links, define grid area it occupies & other styling
 nav {
     display: flex;
     justify-content: center;
@@ -131,6 +147,7 @@ nav {
     background: $primary-background;
 }
 
+// Adjust nav on level 2 pages to display in a horizontal bar
 .nav-lvl2-pg {
     flex-direction: row;
     justify-content: space-around;
@@ -139,7 +156,6 @@ nav {
 }
 
 // set margins around navigational links for better readability
-// CHECK THIS -> doesn't apply to index.html overwritten by .nav-home-item styling below
 nav a {
     font-weight: bold;
     color: gray;
@@ -149,14 +165,14 @@ nav a {
     justify-content: center;
 }
 
+// Adjust flex direction & other styling on Home page nav
 #nav-home-pg {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100%;
     padding: 1rem 0;
 }
 
+// Style nav link "buttons" in nav bar on Home page
 .nav-home-item {
     min-height: 20%;
     width: 60%;
@@ -168,6 +184,7 @@ nav a {
     margin: 0.5rem;
 }
 
+// Style nav links in nav bar on level 2 pages
 .nav-lvl2-pg-item {
     color: $main-font-color;
     padding: 0 0.8rem;
@@ -175,12 +192,14 @@ nav a {
     font-size: 0.9rem;
 }
 
+// Apply darker colour to link to current page in nav bar to indicate current location
 .nav-current-pg-link {
     color: rgba(128, 128, 128, 0.699);
 }
 
+// Style Main section of pages, apply overflow scrolling, grid area and define as flex container
 main {
-    @include scrolling-section()
+    @include scrolling-section();
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -191,6 +210,7 @@ main {
     background: $primary-background;
 }
 
+// Style paragraphs within Main sections
 main p {
     font-size: 1.2rem;
     text-align: justify;
@@ -198,26 +218,26 @@ main p {
     margin-bottom: 0.5rem;
 }
 
+// Style links within Main sections
 main a {
     color: lightgray;
     text-decoration: underline;
 }
 
+// Adjust styling of Main section on About page
 #main-about {
     padding: 1rem;
     line-height: 1.25;
     background: $primary-background;
 }
 
+// Adjust styling of paragraphs within Main section of Contact page
 #main-contact p {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#resume {
-    margin-bottom: 1rem;
-}
-
+// Style Skills section containing logos & resume link and define as a grid
 #skills {
     display: grid;
     grid-template-areas: "html resume css";
@@ -226,15 +246,18 @@ main a {
     margin-bottom: 1rem;
 }
 
+// Style logos in Skills section on About page
 .about-logos {
     width: 10vh;
     align-self: center;
 }
 
+// Style primary text on About page
 #about-text {
     line-height: 1.4;
 }
 
+// Define grid areas of logos within Skills section of About page
 #html-logo {
     grid-area: html;
 }
@@ -243,26 +266,33 @@ main a {
     grid-area: css;
 }
 
+// Define grid area of resume link, display as flex to center vertically and adjust styling
 #resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: resume;
     padding-top: 10px;
-    font-size: 1.2rem;
     color: white;
     text-decoration: underline;
 }
 
+// Style email address mailto link on Contact page
 #email {
     font-size: 1.8rem;
 }
 
+// FIX THIS - NOT WORKING: Adjust color of email link after it has been visited
 #email:visited {
     color: #B46D73;
 }
 
+// Remove underline from links within Aside containing list of blog posts 
 aside a {
     text-decoration: underline;
 }
 
+// Style Project sections containing project info on Portfolio page
 .project {
     color: black;
     background: $dark-pink-mountans;
@@ -272,25 +302,29 @@ aside a {
     margin: 1rem;
 }
 
+// Every second project to have an alternate background colour
 .project:nth-child(even) {
     background: $secondary-color;
 }
 
+// Style images within Project sections
 .project-image {
     display: block;
-    margin: 0 auto;
+    margin: 5vh auto;
     width: 90%;  
 }
 
+// Style puppy image within project
 #puppy {
     border-radius: 50%;
 }
 
+// Define grid area of section containing list of blog posts on About page
 .posts {
     grid-area: posts;
 }
 
-// list of blog posts in lower part of About
+// Style list of blog posts on About page and define as a grid
 .post-list {
     width: 100%;
     display: grid;
@@ -305,16 +339,18 @@ aside a {
     padding: 1rem;
 }
 
+// Apply alternate background colour to every second blog post in list of posts
 .post-list:nth-child(even) {
-    background: #BFAA88;
+    background: $blog-list-alt;
 }
 
+// Style text within Main section of Blog page
 #main-blog {
     color: black;
     line-height: 1.25;
 }
 
-// post containers on blog page - set width to 100% of parent container
+// Style post containers on blog page and define as a grid
 .post {
     width: 100%;
     display: grid;
@@ -331,15 +367,19 @@ aside a {
     margin-bottom: 1rem;
 }
 
+// Apply alternate background colour to odd-numbered blog posts on Blog page
 .post:nth-child(odd) {
     background: $dark-pink-mountans;
 }
 
-.post .blog-published {
+// Style primary text in posts on Blog page & define grid area
+.blog-published {
+    grid-area: published;
     font-size: 0.9rem;
+    font-style: italic;
 }
 
-
+// Style images in blog posts on Blog page and in list of blog posts on About page
 .blog-images, .blog-list-images {
     max-width: 25vw;
     border-radius: 5%;
@@ -348,30 +388,31 @@ aside a {
     margin-right: 0.5rem;
 }
 
+// Define grid area of blog titles
 .blog-title {
     grid-area: title;
 }
 
-.blog-published {
-    font-style: italic;
-}
-
+// Define grid area of blog titles & style text
 .blog-blurb {
     grid-area: blurb;
     text-align: left;
 }
 
+// Define grid area of blog text
 .blog-text {
     grid-area: text;
 }
 
+// Style link to Blog page at bottom of list of blog posts on About page
 #blog-link {
     text-align: center;
     font-weight: bold;
-    background: $secondary-color;
+    background: $blog-list-alt;
     padding: 1rem;
 }
 
+// Style footer and define as flex container
 footer {
     display: flex;
     flex-direction: column;
@@ -382,69 +423,63 @@ footer {
     padding: 1rem;
 }
 
+// Define section containing social media info on Contacts page as flex container
 #contact3 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+// Define section containing social media logos as a flex container
 .socials {
     display: flex;
     justify-content: space-around;
     width: 40%;
 }
 
+// Style social media logo container on Contacts page
 #socials-contact {
     width: 55%;
     margin-top: 1rem;
 }
 
+// Remove underline from links within social media logo container on Contacts page
 #socials-contact a {
     text-decoration: none;
 }
 
+// Style social media logos appearing in Footer
+.social-logo {
+    width: 7vh;
+}
+
+// Adjust styling of social media logos on Contacts page only (not in Footer)
 .social-logo-contact {
     width: 10vh;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.social-logo {
-    width: 7vh;
-}
-
+// Style copyright info in Footer
 #copyright {
     margin-top: 1rem;
     font-weight: bold;
 }
 
+// Adjust styling of copyright info on Contacts page only (as Social Media logos not in Footer)
 #copyright-contact {
     font-weight: bold;
 }
 
-// media query for extremely narrow mobile
-// @media only screen and (max-width: 296px) {
-//     h1 {
-//         font-size: 1.5rem;
-//     }
-
-//     #intro {
-//         font-size: 0.85rem;
-//     }
-
-//     .socials {
-//         width: 50%;
-//     }
-// }
-
-
 // media queries for tablet viewport sizes
 @media only screen and (min-width: 550px) {
     // Adjustments required for Home page
+    // Increase size of intro text in Header
     #intro {
         font-size: 1.35rem;
     }
-
+    
+    // Define 2x2 grid layout of nav on Home page
     #nav-home-pg {
         width: 100vw;
         display: grid;
@@ -457,35 +492,39 @@ footer {
         margin: 0 auto;
     }
 
+    // Adjust styling of links in nav on Home page
     .nav-home-item {
         width: 100%;
         height: 100%;
         font-size: 2rem;
     }
 
+    // Apply flex to container of social media logos for better spacing
     .socials {
         display: flex;
         justify-content: space-around;
         width: 30%;
     }
     
+    // Change footer background colour and decrease font size
     footer {
         font-size: 0.8rem;
         background: #B46D73;
     }
 
     // Adjustments for all 2nd level pages
+    // Change flex direction to make vertical navbar
     .nav-lvl2-pg {
         flex-direction: column;
         justify-content: space-around;
     }
 
-    // .nav-contact-pg-item {
-    //     font-size: 1.25rem;
-    //     border: 2px solid red;
-    // }
+    .nav-lvl2-pg-item {
+        font-size: 1.5rem;
+    }
 
     // Adjustments required for About
+    // Adjust grid layout of About page to have three columns to accommodate nav sidebar and blog post list sidebar
     #wrapper-about {
         height: 100vh;
         grid-template-columns: 1fr 3fr 1fr;
@@ -496,26 +535,43 @@ footer {
         ;
     }
 
+    // Apply overflow scrolling to vertical nav sidebar, main section and aside containing list of blog posts
     #nav-about-pg, #main-about, #aside-about {
         max-height: 60vh;
         @include scrolling-section()
     }
 
-    #aside-about {
-        border: 1px solid black;
-    }
-
+    //  Style images in list of blog posts
     .blog-list-images {
         width: 80%;
         margin: 8px 0;
     }
 
+    // Define container of blog posts as a flex container
     .post-list {
         display: flex;
         flex-direction: column;
     }
 
+    // Adjustments required for Portfolio & Blog pages
+    // Adjust grid layout of Portfolio & Blog pages to have two columns to accommodate nav sidebar
+    #wrapper-portfolio, #wrapper-blog {
+        height: 100vh;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "header header"    
+            "nav main"
+            "footer footer"
+        ;
+    }
+
+    // Reduce size of project images
+    .project-image {
+        width: 80%;
+    }
+
     // Adjustments required for Contact page
+    // Redine wrapper grid with three columns to enable nav as vertical sidebar
     #wrapper-contact {
         grid-template-rows: 30vh 60vh 10vh;
         grid-template-columns: 1fr 3fr;
@@ -526,11 +582,41 @@ footer {
         ;
     }
 
+    .blog-images {
+        width: 25%;
+        border: 2px solid green;
+    }
+
+    // Adjust grid columns on blog article containers to make image column narrower
+    .post {
+        border: 2px solid red
+        // width: 100%;
+        // display: grid;
+        grid-template-columns: 1fr 3fr;
+        // grid-template-areas:
+        //     "image title"
+        //     "image published"
+        //     "text text"
+        ;
+    }
+
+    // Increase margin around blog post containers
+    .post {
+        margin: 1rem;
+    }
+
+    // Add right margin to blog post images
+    .blog-images {
+        margin-right: 1rem;
+    }
+
+    // Adjust styling on Main section of Contact page
     #main-contact {
         padding-left: 20px;
         padding-top: 20px;
     }
 
+    // Increase text size in paragraphs within Main section of Contact page
     #main-contact p {
         font-size: 1.7rem;
     }
@@ -538,6 +624,8 @@ footer {
 
 // intermediate breakpoint large tablet/small desktop
 @media only screen and (min-width: 800px) {
+    // Adjustments required for Home page
+    // Adjust grid definition of nav on homepage to better fill screen
     #nav-home-pg {
         width: 100vw;
         display: grid;
@@ -546,6 +634,7 @@ footer {
         padding: 5% 10%;
     }
 
+    // Define container of social media logos as flex for better spacing
     .socials {
         display: flex;
         justify-content: space-around;
@@ -553,25 +642,44 @@ footer {
     }
 
     // Adjustments for level 2 pags
+    // Adjust sizing of headshot in header
     .jj-photo-lvl2-pg {
         width: 17vh;
     }
     
+    // Adjust sizing of heading in header
     .heading-lvl2-pg {
         font-size: 2.3rem;
     }
 
+    // Adjust sizing of links in nav sidebar
     .nav-lvl2-pg-item {
         font-size: 1.8rem;
+    }
+
+    // Adjustments for Portfolio page
+    // Reduce size of project images
+    .project-image {
+        width: 60%;  
+    }
+
+    // Adjustments for Blog page
+    // Decrease size of blog images
+    .blog-images {
+        width: 15vw;
+        border: 2px solid red;
     }
 }
 
 // media query for desktop screens
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1000px) {
+    // Adjustments required for Home page
+    // Adjust grid row proportions on wrapper on Home page
     #wrapper {
         grid-template-rows: 35vh 50vh 15vh;
     }
     
+    // Adjust styling on elements within Header
     header {
         height: 35vh;
     }
@@ -580,23 +688,26 @@ footer {
         width: 18vh;
     }
 
+    // Redefine nav grid to enable checkerboard type effect
     #nav-home-pg {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-template-areas:
-            "about space1 portfolio space2"
-            "space3 blog space4 contact"
+            "about . portfolio ."
+            ". blog . contact"
         ;
         column-gap: 1vw;
         row-gap: 1vw;
         padding: 2.5% 5%;
     }
 
+    // Style nav links to fill entire grid cells
     .nav-home-item {
         width: 100%;
         height: 100%;
     }
 
+    // Set grid area of each link within nav
     #nav-about-link {
         grid-area: about;
     }
@@ -613,34 +724,65 @@ footer {
         grid-area: contact;
     }
 
+    // Adjust horizontal flex space on social media logos container
     .socials {
-        display: flex;
         justify-content: space-between;
         width: 18vh;
     }
 
-    footer {
-        background: $dark-pink-mountans;
-    }
-
-    // Adjustments for level 2 pags
-    // .jj-photo-lvl2-pg {
-    //     width: 17vh;
-    // }
-    
-    // .heading-lvl2-pg {
-    //     font-size: 2.3rem;
-    // }
-
+    // Adjustments required for level two pages
+    // Increase size of links in nav
     .nav-lvl2-pg-item {
         font-size: 2rem;
     }
 
+    // Adjustments required for About
+    // Adjust size of images in blog post list Aside
+    // Made Aside column continaing list of blog posts narrower
+    #wrapper-about {
+        height: 100vh;
+        grid-template-columns: 1fr 3fr 0.7fr;
+        grid-template-areas:
+            "header header header"    
+            "nav main posts"
+            "footer footer footer"
+        ;
+    }
+
+    // Adjustments required for Portfolio
+    // Adjust grid columns of Portfolio page to reduce width of nav sidebar
+    #wrapper-portfolio {
+        grid-template-columns: 0.7fr 3fr;
+    }
+
+    // Adjust layout of Main section of Portfolio page to display projects horizontally
+    #main-portfolio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Adjust sizing of project containers
+    .project {
+        height: 100%;
+        margin: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    // Adjust sizing of project images
+    .project-image {
+        max-height: 45vh;
+        max-width: 25vh;
+    }
+
+
+
     // Adjustments required for Contact page
+    // Adjust column proportions to reduce width of sidebar nav
     #wrapper-contact {
         grid-template-columns: 1fr 4fr;
     }
     
+    // Apply grid to Main contact info area to better space out elements on screen
     #main-contact {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -650,6 +792,7 @@ footer {
         ;
     }
 
+    // Define grid areas on contact elements
     #contact1 {
         grid-area: contact1;
     }
@@ -662,6 +805,7 @@ footer {
         grid-area: contact3;
     }
 
+    // Adjust width of social media logos container to better fill space
     #socials-contact {
         width: 30vh;
     }

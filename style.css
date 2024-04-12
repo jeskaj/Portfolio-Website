@@ -106,9 +106,7 @@ nav a {
 }
 
 #nav-home-pg {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100%;
   padding: 1rem 0;
 }
@@ -136,6 +134,8 @@ nav a {
 }
 
 main {
+  overflow: auto;
+  scrollbar-color: rgba(211, 188, 150, 0.6431372549) #7C4066;
   grid-area: main;
   display: flex;
   flex-direction: column;
@@ -169,20 +169,17 @@ main a {
   margin-bottom: 20px;
 }
 
-#resume {
-  margin-bottom: 1rem;
-}
-
 #skills {
   display: grid;
   grid-template-areas: "html resume css";
-  text-align: center;
+  justify-content: center;
   min-width: 30vw;
   margin-bottom: 1rem;
 }
 
 .about-logos {
   width: 10vh;
+  align-self: center;
 }
 
 #about-text {
@@ -198,9 +195,11 @@ main a {
 }
 
 #resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: resume;
   padding-top: 10px;
-  font-size: 1.2rem;
   color: white;
   text-decoration: underline;
 }
@@ -232,7 +231,7 @@ aside a {
 
 .project-image {
   display: block;
-  margin: 0 auto;
+  margin: 5vh auto;
   width: 90%;
 }
 
@@ -255,7 +254,7 @@ aside a {
 }
 
 .post-list:nth-child(even) {
-  background: #BFAA88;
+  background: #b6a994;
 }
 
 #main-blog {
@@ -279,8 +278,10 @@ aside a {
   background: #B46D73;
 }
 
-.post .blog-published {
+.blog-published {
+  grid-area: published;
   font-size: 0.9rem;
+  font-style: italic;
 }
 
 .blog-images, .blog-list-images {
@@ -295,10 +296,6 @@ aside a {
   grid-area: title;
 }
 
-.blog-published {
-  font-style: italic;
-}
-
 .blog-blurb {
   grid-area: blurb;
   text-align: left;
@@ -311,7 +308,7 @@ aside a {
 #blog-link {
   text-align: center;
   font-weight: bold;
-  background: rgba(211, 188, 150, 0.6431372549);
+  background: #b6a994;
   padding: 1rem;
 }
 
@@ -346,14 +343,14 @@ footer {
   text-decoration: none;
 }
 
+.social-logo {
+  width: 7vh;
+}
+
 .social-logo-contact {
   width: 10vh;
   margin-left: 5px;
   margin-right: 5px;
-}
-
-.social-logo {
-  width: 7vh;
 }
 
 #copyright {
@@ -399,8 +396,8 @@ footer {
     flex-direction: column;
     justify-content: space-around;
   }
-  .nav-contact-pg-item {
-    font-size: 1.25rem;
+  .nav-lvl2-pg-item {
+    font-size: 1.5rem;
   }
   #wrapper-about {
     height: 100vh;
@@ -410,11 +407,7 @@ footer {
   #nav-about-pg, #main-about, #aside-about {
     max-height: 60vh;
     overflow: auto;
-    scrollbar-color: rgba(211, 188, 150, 0.6431372549) black;
-    scrollbar-width: thin;
-  }
-  #aside-about {
-    border: 1px solid black;
+    scrollbar-color: rgba(211, 188, 150, 0.6431372549) #7C4066;
   }
   .blog-list-images {
     width: 80%;
@@ -424,10 +417,27 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  #wrapper-portfolio, #wrapper-blog {
+    height: 100vh;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header header" "nav main" "footer footer";
+  }
+  .project-image {
+    width: 80%;
+  }
   #wrapper-contact {
     grid-template-rows: 30vh 60vh 10vh;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: "header header" "nav main" "footer footer";
+  }
+  .post {
+    border: 2px solid red;
+  }
+  .post {
+    margin: 1rem;
+  }
+  .blog-images {
+    margin-right: 1rem;
   }
   #main-contact {
     padding-left: 20px;
@@ -459,8 +469,15 @@ footer {
   .nav-lvl2-pg-item {
     font-size: 1.8rem;
   }
+  .project-image {
+    width: 60%;
+  }
+  .blog-images {
+    width: 15vw;
+    border: 2px solid red;
+  }
 }
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1000px) {
   #wrapper {
     grid-template-rows: 35vh 50vh 15vh;
   }
@@ -473,7 +490,7 @@ footer {
   #nav-home-pg {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "about space1 portfolio space2" "space3 blog space4 contact";
+    grid-template-areas: "about . portfolio ." ". blog . contact";
     -moz-column-gap: 1vw;
          column-gap: 1vw;
     row-gap: 1vw;
@@ -496,15 +513,32 @@ footer {
     grid-area: contact;
   }
   .socials {
-    display: flex;
     justify-content: space-between;
     width: 18vh;
   }
-  footer {
-    background: #B46D73;
-  }
   .nav-lvl2-pg-item {
     font-size: 2rem;
+  }
+  #wrapper-about {
+    height: 100vh;
+    grid-template-columns: 1fr 3fr 0.7fr;
+    grid-template-areas: "header header header" "nav main posts" "footer footer footer";
+  }
+  #wrapper-portfolio {
+    grid-template-columns: 0.7fr 3fr;
+  }
+  #main-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .project {
+    height: 100%;
+    margin: 1rem;
+    margin: 0 0.5rem;
+  }
+  .project-image {
+    max-height: 45vh;
+    max-width: 25vh;
   }
   #wrapper-contact {
     grid-template-columns: 1fr 4fr;
