@@ -53,21 +53,21 @@ How components and styling will engage the audience
 This site was written in HTML and CSS (including scss) using VSCode.
 
 List of components:
-- Header
+- Header (text & images)
     - Home page version
     - Second level pages version
-- Nav
+- Nav (text)
     - Home page - vertical buttons design
     - Second level pages nav bar under header
-- Footer
+- Footer (text & images)
     - Primary version used on most pages
     - Contact page version (socials moved into main section of that page)
-- Main section of page
+- Main section of page (text & image)
     - Used primarily on About and Contact pages
     - Other pages, used as a container for other components
-- Aside containing list of blog posts on About page
-- Portfolio project sections
-- Blog posts on blog page
+- Aside containing list of blog posts on About page (text & image)
+- Portfolio project sections (text & image)
+- Blog posts on blog page (text & image)
 
 
 #### NOT TO BE LEFT IN
