@@ -86,9 +86,33 @@ Each Project on the Profile page contains a link to the relevant repository with
 
 ![About Page - Mobile Wireframe](docs/about-mobile-tablet-wireframes.png)
 
-*Home Page layout for desktop:*
+*About Page layout for desktop:*
 
 ![About Page - Desktop Wireframe](docs/about-desktop-wireframe.png)
+
+*Portfolio Page layouts for mobile and tablet:*
+
+![Portfolio Page - Mobile Wireframe](docs/portfolio-mobile-tablet-wireframes.png)
+
+*Portfolio Page layout for desktop:*
+
+![Portfolio Page - Desktop Wireframe](docs/portfolio-desktop-wireframe.png)
+
+*Blog Page layouts for mobile and tablet:*
+
+![Blog Page - Mobile Wireframe](docs/blog-mobile-tablet-wireframes.png)
+
+*Blog Page layout for desktop:*
+
+![Blog Page - Desktop Wireframe](docs/blog-desktop-wireframe.png)
+
+*Contact Page layouts for mobile and tablet:*
+
+![Contact Page - Mobile Wireframe](docs/contact-mobile-tablet-wireframes.png)
+
+*Contact Page layout for desktop:*
+
+![Contact Page - Desktop Wireframe](docs/contact-desktop-wireframe.png)
 
 **[REMOVE THIS:]**
 Explain: Your decision making process relating to the overall aesthetic of your website
