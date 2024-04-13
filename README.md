@@ -70,9 +70,32 @@ Each Project on the Profile page contains a link to the relevant repository with
     <img src="docs/github-chess-board.png" alt="Chess Board project GitHub repository">
 </figure>
 
-### Design
+### Design Aesthetics
 
+I chose the below image of mountains under a sunset view for the header (hero) image, as it reflects my love of being in nature and also projects an atmosphere in calm, which reflects my calm and rational nature.  
 
+![Header mountain image](docs/mountains-header-image.png)
+
+This set the aesthetic for the site and the colour pallet used was based off the tones in this image (especially the background purple and dark pink).
+
+The headshot image used stands out well against the background header image, but does not conflict with it.  However, I do intend to replace it with a more professional headshot, similar to the one on my LinkedIn profile (that photo was taken by my former employer and I only have a version of the file with very low resolution, which is not sufficient when the image is enlarged beyone quite a small size, as you can see from my use of it in the placeholder resume, linked on the About page).
+
+A text colour of light grey or white was used against the purple background and black against the pink background, to produce sufficient contrast for readability.
+
+The font family of League Spartan was chosen for its clean, modern, sans-serif look (with sans-serif as backup font), as being suitable for a professional site.
+
+The nav bar was given a black background for prominence and contrast, with light grey link text and a darker grey used on the link indicating the current page location (on second level pages).
+
+*Vertical nav bar indicating current location is the About page:*  
+![Vertical nav bar](docs/nav-bar-vertical.png)
+
+Turning the nav bar into a checkerboard type of effect on the desktop layout of the Home page was done to make better use of the screen real estate, given that the page had no other main content.  It also adds a bit of whimsy to the site ;-)
+
+![Home page desktop layout nav](docs/home-nav-desktop.png)
+
+In the list of blog posts on the About page, the blog articles on the Blog page and the project sections on the portfolio page, the dark pink background was alternated with a light coffee colour to highlight the change from one item to the next and provide visual interest:
+
+![Project cards with alternating backgrounds](docs/project-alt-backgrounds.png)
 
 #### Wireframes
 
@@ -116,20 +139,11 @@ Each Project on the Profile page contains a link to the relevant repository with
 
 ![Contact Page - Desktop Wireframe](docs/contact-desktop-wireframe.png)
 
-**[REMOVE THIS:]**
-Explain: Your decision making process relating to the overall aesthetic of your website
-
-Mountain hero image - calming (desirable quality in a professional), reflects my love of nature
-
-Other colours chosen to blend in with and complement the mountain hero image
-
 ### Functionality & Features
 
 This structure and content of this site was written in HTML and styled with CSS (including SASS/SCSS).
 
 The site comprises the following **components**:
-
-*** ADD MORE ABOUT HOW STYLING WILL ENGAGE THE AUDIENCE ***
 
 #### Header (Hero Unit)
 
