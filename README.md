@@ -72,10 +72,16 @@ Each Project on the Profile page contains a link to the relevant repository with
 
 ### Design
 
-Include:  
-Wireframes or mockups of the pages of your website  
-Explain:  
-Your decision making process relating to the overall aesthetic of your website
+#### Wireframes
+
+*Home Page layouts for mobile, tablet and desktop:*
+
+![Home Page - Mobile Wireframe](docs/home-mobile-tablet-wireframes.png)
+
+![Home Page - Desktop Wireframe](docs/home-desktop-wireframe.png)
+
+**[REMOVE THIS:]**
+Explain: Your decision making process relating to the overall aesthetic of your website
 
 Mountain hero image - calming (desirable quality in a professional), reflects my love of nature
 
