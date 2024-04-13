@@ -72,6 +72,8 @@ Each Project on the Profile page contains a link to the relevant repository with
 
 ### Design
 
+
+
 #### Wireframes
 
 *Home Page layouts for mobile and tablet:*
@@ -133,9 +135,13 @@ The site comprises the following **components**:
 
 Each page contains a Header component / Hero unit at the top.  All headers include:
 
-- Background image - setting the asthetic of the site
+- Background image - setting the aesthetic of the site
 - Headshot image - to introduce me to the audience
 - Title of page heading - in large text to make the purpose of the current page clear
+
+*Header of the Home page:*
+
+![Header](docs/header.png)
 
 The semantic tag `<header>` has been used to indicate that this component appears near the top of the page and contains important information about it.
 
@@ -201,6 +207,10 @@ The purpose of the Main section on the second level pages is to contain the prim
 - Blog: Blog articles I have written
 - Contact:  My contact information
 
+*Main section of the Portfolio page:*
+
+![Main section](docs/main-section.png)
+
 The semantic tag `<main>` has been used to indicate that this component contains the main content the page.
 
 The Home page does not contain a Main section, as, aside from introducing my name and role (which is done by the Header), it's main function is a to be a landing page allowing the user to quickly navigate to other site pages.  Therefore, the Nav occupies the middle section / primary real estate of the Home page.
@@ -213,13 +223,20 @@ The semantic tag `<aside>` has been used to indicate that this component contain
 
 The Aside contains multiple blog post summary elements, each of which is a component in it's own right and contains a summary of a blog post.  Each post listing contains an image for visual interest, in addition to title, date published, a brief summary sentence and a direct link to the full blog post.
 
-Due to limited horizontal space on mobile layouts, the Aside appears underneathe the Main section.
+Due to limited horizontal space on mobile layouts, the Aside appears underneath the Main section:
+
+![Aside - mobile layout](docs/aside-mobile.png)
 
 On tablet and desktop layouts, to make better use of available horizontal space, it appears on the right hand side of the screen next to the Main section.  In this way, it is more prominent to the user's attention and also provides some visual balance to the Nav bar on the left side of the main section.
 
+*Aside in desktop layout:*
+![Aside - mobile layout](docs/aside-desktop.png)
+
 #### Project Sections (Portfolio Page)
 
-Project sections appear within the Main section of the Portfolio page.
+Project sections appear within the Main section of the Portfolio page:
+
+![Project Sections](docs/project-section.png)
 
 The purpose of the Project sections is to demonstrate my technical skills by displaying my recent projects for potential employers to review.
 
@@ -234,7 +251,9 @@ Each project section comprises:
 
 #### Blog Post Articles (Blog Page)
 
-Blog Post Articles appear within the Main section of the Blog page.
+Blog Post Articles appear within the Main section of the Blog page:
+
+![Blog Article](docs/blog-article.png)
 
 My site includes a Blog to further demonstrate my experience, skills and interests.
 
@@ -256,8 +275,8 @@ The semantic tag `<footer>` has been used to indicate that this component contai
 
 On the tablet & desktop layouts, where height is restricted to the viewport height, the footer has a lighter background colour (chosen from the header image), distinguishing it from the main section of the page and also providing visual balance, as an offset to the header.
 
-Footer in mobile layout  
+*Footer in mobile layout:*  
 ![Home Footer - Mobile](docs/home-footer-mobile.png)
 
-Footer in table layout  
+*Footer in table layout:*  
 ![Home Footer - Tablet](docs/home-footer-tablet.png)
