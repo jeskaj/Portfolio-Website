@@ -54,13 +54,31 @@ The only other internal document linked to the site is a PDF of my resume, which
 
 Links to my professional social media profiles ([LinkedIn](https://www.linkedin.com/in/jessica-jakeman/) and [Github](https://github.com/jeskaj) - see screenshots below) are included in the footer of every page, except for the Contact page, which features them more prominently in the main section.
 
-Each Project on the Profile page contains a link to the relevant repository within my Github profile.
-
-![LinkedIn Profile](docs/linkedin-profile.png)
+<figure>
+    <figcaption>LinkedIn Profile page</figcaption>
+    <img src="docs/linkedin-profile.png" alt="LinkedIn Profile">
+</figure>
 
 <figure>
     <figcaption>GitHub Profile page</figcaption>
     <img src="docs/github-profile.png" alt="GitHub Profile">
+</figure>
+
+Each Project on the Profile page contains a link to the relevant repository within my Github profile.
+
+<figure>
+    <figcaption>IMA Zebra project GitHub repository page</figcaption>
+    <img src="docs/github-ima-zebra.png" alt="IMA Zebra project GitHub repository">
+</figure>
+
+<figure>
+    <figcaption>Cute Puppy project GitHub repository page</figcaption>
+    <img src="docs/github-effects--animations-challenge.png" alt="Cute Puppy project GitHub repository">
+</figure>
+
+<figure>
+    <figcaption>Chess Board project GitHub repository page</figcaption>
+    <img src="docs/github-chess-board.png" alt="Chess Board project GitHub repository">
 </figure>
 
 ### Functionality / features
