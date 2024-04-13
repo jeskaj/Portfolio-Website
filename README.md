@@ -74,11 +74,21 @@ Each Project on the Profile page contains a link to the relevant repository with
 
 #### Wireframes
 
-*Home Page layouts for mobile, tablet and desktop:*
+*Home Page layouts for mobile and tablet:*
 
 ![Home Page - Mobile Wireframe](docs/home-mobile-tablet-wireframes.png)
 
+*Home Page layout for desktop:*
+
 ![Home Page - Desktop Wireframe](docs/home-desktop-wireframe.png)
+
+*About Page layouts for mobile and tablet:*
+
+![About Page - Mobile Wireframe](docs/about-mobile-tablet-wireframes.png)
+
+*Home Page layout for desktop:*
+
+![About Page - Desktop Wireframe](docs/about-desktop-wireframe.png)
 
 **[REMOVE THIS:]**
 Explain: Your decision making process relating to the overall aesthetic of your website
