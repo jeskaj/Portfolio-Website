@@ -14,7 +14,7 @@ All files pertaining to this project can be found in the following GitHub repo:
 
 ### Purpose
 
-The purpose of this website is to showcase my skills, talents, abilities and coding experience, in order to introduce myself to potential employers as a skilled web developer and IT professional.
+The purpose of this website is to showcase my skills, talents, abilities and coding experience, in order to introduce myself as a skilled web developer and IT professional to the target audience - potential employers.
 
 ### Website Structure
 
@@ -31,44 +31,35 @@ My portfolio has a relatively simple structure, consisting of two levels only, a
 
 #### Navigation
 
-Every page contains a navigational component to enable all other pages to be accessed directly.  On the Home page, this takes the form of prominent navigational button-like anchor elements featured in the mid section of the page.  All other pages contain a nav bar, directly under the header component on smaller layouts and as a sidebar in larger layouts.
+Every page contains a navigational component to enable all other pages to be accessed directly.  On the Home page, this takes the form of prominent navigational button-like anchor elements featured in the mid section of the page.  All other pages contain a nav bar, directly under the header component on smaller layouts and as a sidebar in larger layouts (screenshots of these layouts are shown later, under the section detailing the Navigational bar component).
 
 The nav bars show the link to the current page in a darker colour, to indicate the user's current location.
 
 The About page contains a list of blog posts, which link directly to the relevant articles on the Blog page.
 
-The only other internal document linked to the site is a PDF of my resume, which is linked to the About page.
+The only other internal document linked to the site is a PDF of my resume (currently a placeholder), which is linked to the About page.
 
 #### External links
 
-Links to my professional social media profiles ([LinkedIn](https://www.linkedin.com/in/jessica-jakeman/) and [Github](https://github.com/jeskaj) - see screenshots below) are included in the footer of every page, except for the Contact page, which features them more prominently in the main section.
+Links to my professional social media profiles ([LinkedIn](https://www.linkedin.com/in/jessica-jakeman/) and [Github](https://github.com/jeskaj) - see screenshots below) are included in the footer of every page, except for the Contact page, which features them more prominently in the Main section.
 
-<figure>
-    <figcaption>LinkedIn Profile page</figcaption>
-    <img src="docs/linkedin-profile.png" alt="LinkedIn Profile">
-</figure>
+*LinkedIn Profile:*
+![LinkedIn Profile page](docs/linkedin-profile.png)
 
-<figure>
-    <figcaption>GitHub Profile page</figcaption>
-    <img src="docs/github-profile.png" alt="GitHub Profile">
+*Github Profile:*
+![GitHub Profile page](docs/github-profile.png)
 </figure>
 
 Each Project on the Profile page contains a link to the relevant repository within my Github profile.
 
-<figure>
-    <figcaption>IMA Zebra project GitHub repository page</figcaption>
-    <img src="docs/github-ima-zebra.png" alt="IMA Zebra project GitHub repository">
-</figure>
+*IMA Zebra project GitHub repository:*
+![IMA Zebra project GitHub repository page](docs/github-ima-zebra.png)
 
-<figure>
-    <figcaption>Cute Puppy project GitHub repository page</figcaption>
-    <img src="docs/github-effects--animations-challenge.png" alt="Cute Puppy project GitHub repository">
-</figure>
+*Cute Puppy project GitHub repository:*
+![Cute Puppy project GitHub repository page](docs/github-effects--animations-challenge.png)
 
-<figure>
-    <figcaption>Chess Board project GitHub repository page</figcaption>
-    <img src="docs/github-chess-board.png" alt="Chess Board project GitHub repository">
-</figure>
+*Chess Board project GitHub repository:*
+![Chess Board project GitHub repository page](docs/github-chess-board.png)
 
 ### Design Aesthetics
 
@@ -76,7 +67,7 @@ I chose the below image of mountains under a sunset view for the header (hero) i
 
 ![Header mountain image](docs/mountains-header-image.png)
 
-This set the aesthetic for the site and the colour pallet used was based off the tones in this image (especially the background purple and dark pink).
+This set the aesthetic for the site and the colour pallet used was based on the tones in this image (especially the background purple and dark pink).
 
 The headshot image used stands out well against the background header image, but does not conflict with it.  However, I do intend to replace it with a more professional headshot, similar to the one on my LinkedIn profile (that photo was taken by my former employer and I only have a version of the file with very low resolution, which is not sufficient when the image is enlarged beyone quite a small size, as you can see from my use of it in the placeholder resume, linked on the About page).
 
@@ -84,9 +75,9 @@ A text colour of light grey or white was used against the purple background and 
 
 The font family of League Spartan was chosen for its clean, modern, sans-serif look (with sans-serif as backup font), as being suitable for a professional site.
 
-The nav bar was given a black background for prominence and contrast, with light grey link text and a darker grey used on the link indicating the current page location (on second level pages).
+The nav bar was given a black background for prominence and contrast, with light grey link text rather than white, as white produced too startling a contrast.  A darker grey font colour was used on the link indicating the current page location (on second level pages).
 
-*Vertical nav bar indicating current location is the About page:*  
+*Vertical nav bar example, indicating the user's current location is the About page:*  
 ![Vertical nav bar](docs/nav-bar-vertical.png)
 
 Turning the nav bar into a checkerboard type of effect on the desktop layout of the Home page was done to make better use of the screen real estate, given that the page had no other main content.  It also adds a bit of whimsy to the site ;-)
@@ -98,6 +89,8 @@ In the list of blog posts on the About page, the blog articles on the Blog page 
 ![Project cards with alternating backgrounds](docs/project-alt-backgrounds.png)
 
 #### Wireframes
+
+Page layouts for mobile, tablet and desktop screen sizes were designed in wireframes, as shown below:
 
 *Home Page layouts for mobile and tablet:*
 
@@ -161,9 +154,7 @@ The semantic tag `<header>` has been used to indicate that this component appear
 
 The primary purpose of the Header is to introduce the page to the user and make its purpose clear.
 
-In the case of the Home page, it also communicates my full name and states my current role, via a short line of text under the heading, introducing me as a web development student:
-
-*Web development student at Coder Academy*
+In the case of the Home page, it also communicates my full name and states my current role, via a short line of text under the heading, introducing me as a web development student.
 
 The Header also provides visual interest to the page, via the background image and headshot.  On tablet and desktop views, it also provides visual balance to the page, offsetting the footer (which has a background colour chosen from the header image).
 
@@ -180,7 +171,7 @@ On the Home page, the Nav includes links to the four second level pages:
 3. Blog
 4. Contact
 
-The Home nav features four rectangular button-link links which clearly stand out and has three layout designs for different screen sizes:
+The Home nav features four rectangular button-like links which clearly stand out and has three layout designs for different screen sizes.
 
 The mobile view has the links vertically stacked, to fill the screen space:
 
@@ -218,7 +209,7 @@ The purpose of the Main section on the second level pages is to contain the prim
 
 - About:  Information about my skills, experience and interests, including a link to my resume
 - Portfolio:  Information about my recent projects
-- Blog: Blog articles I have written
+- Blog: Blog articles I have written (currently placeholder text)
 - Contact:  My contact information
 
 *Main section of the Portfolio page:*
@@ -279,7 +270,6 @@ Each Blog Post Article comprises:
 2. Blog post title - to make clear the subject of the post
 3. Date published - to give context regarding when the post was written
 4. The text of the blog - the full article
-
 
 #### Footer
 

@@ -12,7 +12,7 @@ $blog-list-alt: #b6a994;
     scrollbar-color: $secondary-color $primary-background;
 }
 
-// basic reset recommended by Matt E
+// basic reset of padding & margins, set box-sizing and default font-family
 * {
     box-sizing: border-box;
     font-family: "League Spartan", sans-serif;
